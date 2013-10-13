@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  know_rating: 1
+  diff_rating: 1
+  grade_rating: 1
+  course_id: 1
+  user_id: 1
+
+two:
+  know_rating: 1
+  diff_rating: 1
+  grade_rating: 1
+  course_id: 1
+  user_id: 1

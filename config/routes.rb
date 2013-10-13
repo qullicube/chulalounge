@@ -1,4 +1,16 @@
 ChulaLounge::Application.routes.draw do
+  resources :teaches
+
+  resources :courses
+
+  resources :ratings
+
+  resources :comments
+
+  resources :professors
+
+  resources :users
+
   get "pages/index"
   get "pages/nav"  
 
