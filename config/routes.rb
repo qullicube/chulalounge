@@ -1,4 +1,16 @@
 ChulaLounge::Application.routes.draw do
+  resources :teaches
+
+  resources :courses
+
+  resources :ratings
+
+  resources :comments
+
+  resources :professors
+
+  resources :users
+
   get "pages/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
