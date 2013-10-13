@@ -26,6 +26,3 @@
 //= require ngapp
 //= require_tree ./angular
 //= require_tree .
-
-
-// Divide into 4 parts: service, directive, filter, and controller
