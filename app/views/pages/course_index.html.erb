@@ -1,0 +1,42 @@
+<div class="container-fluid" ng-controller="PageCourseIndex">
+	<div class="row-fluid">
+		<div class="span4">
+			<div class="row-fluid">
+			  <div class="span12 rating-wrapper">
+				<div class="span4 rating-box">7</div>
+				<div class="span4 rating-box">7</div>
+				<div class="span4 rating-box">7</div>
+			  </div>
+			</div>
+			<div class="row-fluid"></div>
+		</div>
+		<div class="span8">
+			<div class="row-fluid">
+				<div class="span12 box">
+					<h4>User Interface</h6>
+					<h6>2143411</h6>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12 box" id="description">
+					<p>Description</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12 box" id="review">
+					<div ng-repeat="review in top_reviews" class="review-box">
+						<div class="content">{{review.comment}}</div>
+						<div class="footer">
+							<ul class="nav pull-left">
+								<li><a href="#">Like <span class="badge">{{review.like}}</span></a></li>
+								<li><a href="#">Dislike <span class="badge">{{review.dislike}}</span></a></li>
+								<li class="disabled"><a>{{review.timestamp}}</a></li>
+							</ul>
+							<div class="pull-right author">By {{review.author}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
