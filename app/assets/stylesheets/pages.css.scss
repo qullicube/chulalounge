@@ -1,7 +1,35 @@
 
-/* Should separate by angularjs controller */
+/*================ INDEX =============== */
 
-*[ng-controller="nav"]{
+*[ng-controller="PageIndex"]{
+
+/* Variables */
+$box:rgb(219, 222, 224);
+
+.box {
+	background-color:$box;
+	padding:40px 0 40px 0;
+	margin:10px !important;
+	border-radius:6px;
+	h2 {
+		text-align:center;
+	}
+}
+
+}
+
+
+
+/*================ NAV =============== */
+
+*[ng-controller="PageNav"]{
+
+/* Variables */
+
+$column1: rgb(219, 222, 224);
+$column2: rgb(236, 240, 241);
+$column3: white;
+
 
 ul {
 	margin: 0;
@@ -20,10 +48,8 @@ ul {
 }
 
 .body {
-  background-color: white;
   color: rgb(127, 130, 133);
-  border-bottom: 2px solid rgb(189, 195, 199);
-  border-top: 2px solid rgb(189, 195, 199);
+
   * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -62,17 +88,7 @@ ul {
   }
   li {
     padding: 28px 28px 20px 28px;
-    background-color: rgb(219, 222, 224);
     color: white;
-    &.active {
-      background-color: rgb(236, 240, 241);
-      color: #798795;
-      /*color: rgb(33, 177, 245);*/
-      * {
-        color: #798795;
-        /*color: rgb(33, 177, 245);*/
-      }
-    }
     .fui-arrow-right {
       font-size: 18px;
       line-height: 35px;
@@ -170,21 +186,36 @@ input[type="search"]::-webkit-input-placeholder{
 
 /* columns */
 
+.column1 {
+	background-color: $column1;
+}
+.column2 {
+	background-color: $column2;
+}
+.column3 {
+	background-color: $column3;
+}
+
 #curriculum {
+  @extend .column1;
   height:100%;
+  li.active {
+  	  color: $column2;
+      * {
+        color: $column2;
+      }
+  }
 }
 
 #year {
-  background-color: rgb(236, 240, 241);
   overflow:hidden;
   height:100%;
   li.active {
-    background: white;
+    background: $column3;
   }
 }
 
 #course {
-  background: rgb(236, 240, 241);
   height:100%;
   li {
     padding: 17px 16px 3px 16px;
@@ -284,4 +315,63 @@ input[type="search"]::-webkit-input-placeholder{
 .border-right {
   border-right: 1px solid rgb(189, 195, 199);
 }
+}
+
+
+/*================ COURSE_INDEX =============== */
+
+*[ng-controller="PageCourseIndex"]{
+	/* Variables */
+	$rating-box: rgb(219, 222, 224);
+
+    .rating-wrapper {
+    }
+	.rating-box {
+		border:1px solid rgb(189, 195, 199);
+		text-align:center;
+		padding:30px 0 30px 0;
+		font-size:22px;
+	}
+	.box {
+		border:1px solid rgb(189, 195, 199);
+		border-top:0;
+		padding:12px;
+	}
+	#description {
+		height:250px;
+	}
+	#review {
+		.review-box {
+			padding:12px 5px 0 5px;
+			overflow:hidden;
+			.content {
+				margin-bottom:20px;
+				font-size:18px;
+				line-height:135%;
+			}
+			.footer {
+			  width:100%;
+			  ul {
+			  	vertical-align: middle;
+			  }
+			  li {
+			  	float:left;
+			  	a {
+			  		display:block;
+			  		border-radius:5px;
+			  		text-decoration: none;
+			  		padding:10px 15px;
+			  		
+			  		&:hover {
+			  			color:#333;
+			  		}
+
+			  	}
+			  }
+			  .author {
+			  	padding:10px 0;
+			  }
+			}
+		}
+	}
 }
