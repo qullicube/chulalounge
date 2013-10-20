@@ -1,4 +1,4 @@
-App.controller('nav', ['$scope','Test', function($scope, Test){
+App.controller('PageNav', ['$scope','Test', function($scope, Test){
 			//SEARCH TOGGLING
 
 		   	var focus_duration = 800;
@@ -19,24 +19,35 @@ App.controller('nav', ['$scope','Test', function($scope, Test){
 					$("#search-tool").clearQueue().switchClass("span12", "span4", focus_duration);
 				}},2000);
 			});
+
+			//TODO: turn this to ngAnimate
+
+
+
+
 			$scope.resize = function(height) {
 				//var height = $("#main").height() + $("#search-tool").height()-1;
 				console.log($("#main").height());
 				$('#year').height(height);
 				$('#course').height(height);
 			}
+
+
 			$scope.curriculumClick = function(c) {
 				if($scope.curriculumSelected == c)
 					$scope.curriculumSelected = null;
 				else
 					$scope.curriculumSelected = c;
 			}
+
+
 			$scope.yearClick = function(c) {
 				if($scope.yearSelected == c)
 					$scope.yearSelected = null;
 				else
 					$scope.yearSelected = c;
 			}
+
 
 			$scope.curriculumSelected = null;
 			$scope.yearSelected = null;

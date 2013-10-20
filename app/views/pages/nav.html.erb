@@ -1,9 +1,9 @@
-<div ng-controller="nav" >
-  <div class="body">
-  <div id="main" class="row-fluid">
+<div ng-controller="PageNav" >
+  <div class="body container-fluid" >
+  <div id="main" class="row-fluid" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
     <div id="curriculum" class="span4">
         <ul class="big-show">
-          <li ng-repeat="curriculum in curriculums" ng-click="curriculumClick(curriculum)" ng-class="{active : curriculumSelected == curriculum}">
+          <li ng-repeat="curriculum in curriculums" ng-click="curriculumClick(curriculum)" ng-class="{column2 : curriculumSelected == curriculum}">
               <div class="content">
                 <h4>{{curriculum.title}}</h4>
                 {{curriculum.subtitle}}
@@ -12,9 +12,9 @@
           </li>
         </ul>
     </div>
-    <div id="year" class="span4">
-        <ul class="small-show" ng-show="curriculumSelected != null">
-        	<li ng-repeat="year in years" ng-click="yearClick(year)" ng-class="{active : yearSelected == year}">
+    <div id="year" class="span4" ng-class="{column2 : curriculumSelected != null, column1 : curriculumSelected == null  }">
+        <ul class="small-show test" ng-show="curriculumSelected != null">
+        	<li ng-repeat="year in years" ng-click="yearClick(year)" ng-class="{column3 : yearSelected == year }">
         	  <div class="content">
                 <h4>{{year}}</h4>
               </div>
@@ -22,14 +22,13 @@
         	</li>
         </ul>
     </div>
-    <div id="course" class="span4">
-      	<ul class="small-show" ng-show="curriculumSelected != null && yearSelected != null">
+    <div id="course" class="span4" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
+      	<ul class="small-show test" ng-show="curriculumSelected != null && yearSelected != null">
       		<li ng-repeat="course in courses">
       		  <div class="content">
       		    <h4>{{course.name}}</h4>
       		  	{{course.number}}  
       		  </div>
-			  <div class="fui-arrow-right"></div>  
       		</li>
       	</ul>
     </div>
