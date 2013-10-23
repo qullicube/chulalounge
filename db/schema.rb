@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013135041) do
+ActiveRecord::Schema.define(version: 20131023104746) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -50,8 +50,9 @@ ActiveRecord::Schema.define(version: 20131013135041) do
   end
 
   create_table "teaches", force: true do |t|
-    t.integer  "course_id"
     t.integer  "professor_id"
+    t.integer  "course_id"
+    t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

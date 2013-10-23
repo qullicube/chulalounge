@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
-	belongs_true :user
-	belongs_true :course
+	belongs_to :users
+	belongs_to :courses
 end

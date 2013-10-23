@@ -20,8 +20,8 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'designmodo-flatuipro-rails'
-gem 'protected_attributes'
 gem 'angularjs-rails'
+gem 'angularjs-rails-resource'
 
 group :doc do
 	gem 'sdoc', require: false

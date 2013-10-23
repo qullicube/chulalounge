@@ -1,9 +1,10 @@
 
 /*================ INDEX =============== */
 
-*[ng-controller="PageIndex"]{
+
 
 /* Variables */
+.index{
 $box:rgb(219, 222, 224);
 
 .box {
@@ -15,15 +16,11 @@ $box:rgb(219, 222, 224);
 		text-align:center;
 	}
 }
-
 }
 
 
-
 /*================ NAV =============== */
-
-*[ng-controller="PageNav"]{
-
+.nav {
 /* Variables */
 
 $column1: rgb(219, 222, 224);
@@ -315,33 +312,90 @@ input[type="search"]::-webkit-input-placeholder{
 .border-right {
   border-right: 1px solid rgb(189, 195, 199);
 }
+
 }
 
 
 /*================ COURSE_INDEX =============== */
 
-*[ng-controller="PageCourseIndex"]{
+.course-index {
 	/* Variables */
 	$rating-box: rgb(219, 222, 224);
 
-    .rating-wrapper {
-    }
 	.rating-box {
 		border:1px solid rgb(189, 195, 199);
 		text-align:center;
-		padding:30px 0 30px 0;
-		font-size:22px;
+		padding:40px 0 40px 0;
+		font-size:26px;
 	}
 	.box {
 		border:1px solid rgb(189, 195, 199);
 		border-top:0;
 		padding:12px;
 	}
+	.filter-wrapper {
+		margin-top:10px;
+		width:100%;
+		.filter-box {
+			border:1px solid rgb(189, 195, 199);
+			padding:12px;
+			margin-bottom:5px;
+		}
+	}
 	#description {
 		height:250px;
+    p {
+      font-size:16px;
+    }
 	}
-	#review {
+
+  #edit-description {
+    p {
+      font-size:16px;
+      height:250px;
+    }
+    textarea {
+      height:250px;
+    }
+  }
+
+	#reviewModal {
+		width:824px;
+		margin-left:-412px;
+		.dropdown {
+			li {
+				float:left;
+				a {
+			  		display:block;
+			  		border-radius:5px;
+			  		text-decoration: none;
+			  		padding:10px 12px 10px 7px;
+			  		.badge {
+			  			background-color:transparent;
+			  			font-size: 16px;
+			  		}	
+
+			  		&:hover {
+			  			color:#333;
+			  		}
+
+			  	}
+			}
+		}
 		.review-box {
+			border-bottom:1px solid #ebedef;
+			.content {
+				margin-bottom:30px;
+				font-size:16px;
+			}
+		}
+	}
+	.middle {
+		text-align: center;
+		font-size:11px;
+		color: #333;
+	}
+	.review-box {
 			padding:12px 5px 0 5px;
 			overflow:hidden;
 			.content {
@@ -349,6 +403,7 @@ input[type="search"]::-webkit-input-placeholder{
 				font-size:18px;
 				line-height:135%;
 			}
+
 			.footer {
 			  width:100%;
 			  ul {
@@ -360,8 +415,12 @@ input[type="search"]::-webkit-input-placeholder{
 			  		display:block;
 			  		border-radius:5px;
 			  		text-decoration: none;
-			  		padding:10px 15px;
-			  		
+			  		padding:10px 12px 10px 7px;
+			  		.badge {
+			  			background-color:transparent;
+			  			font-size: 16px;
+			  		}	
+
 			  		&:hover {
 			  			color:#333;
 			  		}
@@ -372,6 +431,11 @@ input[type="search"]::-webkit-input-placeholder{
 			  	padding:10px 0;
 			  }
 			}
+		}
+	#review-post {
+		resize:none;
+		&.on {
+			height:150px;
 		}
 	}
 }

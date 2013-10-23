@@ -1,6 +1,18 @@
-App.controller('PageCourseIndex', ['$scope', 'Resource', function($scope, Resource){
+App.controller('PageCourseIndex', ['$scope', 'Course', function($scope, Course){
 
-	$scope.course = Resource('/courses').query();
+	var focus_duration = 800;
+
+	$("#review-post").bind('input propertychange', function() {
+		if($("#review-post").val() != "" && !$("#review-post").hasClass('on')){
+			$("#review-post").clearQueue().toggleClass('on', focus_duration);
+		}
+		else{
+			$("#review-post").clearQueue().toggleClass('on', focus_duration);
+		}
+	});
+
+	$scope.courses = Course.query();
+
 	$scope.top_reviews = [
 		{
 			author: 	"Jakkrapat Tangsongjaloen",
@@ -17,5 +29,7 @@ App.controller('PageCourseIndex', ['$scope', 'Resource', function($scope, Resour
 			timestamp:  "Sept 10, 2013" 
 		}
 	];
+
+	$scope.profs = [1,2,3,4,5];
 
 }]);
