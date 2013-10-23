@@ -23,11 +23,6 @@ App.controller('PageNav', ['$scope','Course', function($scope, Course){
 			});
 
 
-			Course.query().then(function(courses) {
-				$scope.course = courses;
-			});
-
-
 			$scope.resize = function(height) {
 				//var height = $("#main").height() + $("#search-tool").height()-1;
 				console.log($("#main").height());
