@@ -449,5 +449,321 @@
 								},
 
 							#Nano Course
+								#Year 2/1
+								{ 	title: "Engineering Materials II",
+									number: '2141201',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Mathematics for Nanotechnology",
+									number: '2141223',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Statics and Mechanics of Materials",
+									number: '2141261',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Electrical Circuits",
+									number: '2141270',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Organic Chemistry Laboratory",
+									number: '2302203',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Physical Chemistry 1",
+									number: '2302231',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+								#Year 2/2
+								{ 	title: "Dynamics and Vibrations",
+									number: '2141263',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Electronic Devices I",
+									number: '2141273',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Electrical and Electronics Laboratory",
+									number: '2141274'
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Biochemistry for NANO Engineers",
+									number: '2310229',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Statistic for Physical Science",
+									number: '2603284',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+								#Year 3/1
+								{ 	title: "Material Characterization",
+									number: '2141303',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Measurement and Instrumentation",
+									number: '2141375',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Micro and NanofabricationTechnology",
+									number: '2141310',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Quantum Mechanics for Engineers",
+									number: '2141331',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nanopolymer Engineering",
+									number: '2141341',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Molecular Chemistry",
+									number: '2141345',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Reaction Engineering",
+									number: '2141346',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Fluid Mechanics for International Engineers",
+									number: '2141365',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+								#Year 3/2
+								{ 	title: "Transport Phenomena",
+									number: '2141366',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Statistical Thermodynamics",
+									number: '2141368',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+								#Year 4/1
+								{ 	title: "IT for Communications",
+									number: '2141481',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nano Seminar",
+									number: '2141490',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Research Methodology",
+									number: '2141491',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Electronic Device II",
+									number: '2141473',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Introduction to VLSI Technolgy",
+									number: '2141475',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Effective Problem Solving for Industry",
+									number: '2141513',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nanomaterial Synthesis by Aerosol Process",
+									number: '2141553',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Cell and Molecular Biology",
+									number: '2141591',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Microbionanotechnology",
+									number: '2141511',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Microbionanotechnology",
+									number: '2141551',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nanoelectronics",
+									number: '2141417',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+								#Year 4/2
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+								
 
 							])
