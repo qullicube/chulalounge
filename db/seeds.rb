@@ -123,14 +123,14 @@
 									number: '2140201',
 									description: "DC circuit analysis; Kirchhoff laws; Thevenin and Norton theorem, semiconductor devices; op amps; 
 											digital circuit; DC motor.",
-									academic_year: 2013,
+									academic_year: 2,
 									semester: 1
 								},
 
 								{ 	title: "Electrical Circuits Lab",
 									number: '2140202',
 									description: "Practices on simple circuits.",
-									academic_year: 2013,
+									academic_year: 2,
 									semester: 1
 								},
 
@@ -140,14 +140,14 @@
 											linear differential equations; Fourier series; Fourier transfroms; Laplace transforms; orthogonal functions and 
 											application to boundary value problems; introduction to complex analysis; advanced matrix algebra; vector 
 											calculus.",
-									academic_year: 2013,
+									academic_year: 2,
 									semester: 1
 								},
 
 								{ 	title: "Fundamental Data Structure and Algorithm",
 									number: '2143203',
 									description: "Basic data types, trees, basic operations on sets, sorting and searching, algorithm design techniques, memory management.",
-									academic_year: 2013,
+									academic_year: 2,
 									semester: 1
 								},
 
@@ -157,7 +157,7 @@
 											cost analysis; break even point, Analysis of decisions in engineering under uncertainty; decision tree, expected 
 											monetary value and expected utility; expected value of perfect information and sampling information; basis for 
 											expected utility theory; rating and ranking of alternatives using multiple criteria; case studies.",
-									academic_year: 2013,
+									academic_year: 2,
 									semester: 1
 								},
 =begin								#Year 2/2
@@ -874,3 +874,21 @@
 									}				
 
 								])
+	Users = User.create ([
+		{id: 1,
+			name: "Fiam"
+		}
+		{id: 2,
+			name: "Poon"
+		}
+		])
+	Comments = Comment.create([
+		{ user_id: 1,
+			course_id: 1,
+
+		}
+		{ user_id: 2,
+			course_id: 1,
+
+		}
+])
