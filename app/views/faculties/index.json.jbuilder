@@ -1,4 +1,3 @@
 json.array!(@faculties) do |faculty|
-  json.extract! faculty, :name, :abbreviation
-  json.url faculty_url(faculty, format: :json)
+  json.extract! faculty, :id, :name, :abbreviation
 end

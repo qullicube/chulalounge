@@ -1,10 +1,10 @@
-<div class="body container-fluid page-nav" ng-controller="PageNav" ng-init="id=<%= @id %>; back=<%=@back%>">
+<div class="body container-fluid page-nav" ng-controller="PageNav" ng-init="init(<%= @id %>); back=<%=@back%>">
   <div id="main" class="row-fluid" ng-class="{column3 : selectedColumn(3),
    column2 : selectedColumn(2),
    column1 : selectedColumn(1)}">
     <div id="curriculum" class="span4">
         <ul class="big-show">
-          <li ng-repeat="curriculum in curriculums |orderBy:'abbreviation':false" ng-click="curriculumClick(curriculum)" ng-class="{column2 : curriculumSelected == curriculum}">
+          <li ng-repeat="curriculum in curriculums |orderBy:'abbreviation':false" ng-click="curriculumClick(curriculum)" ng-class="{active : curriculumSelected == curriculum}">
               <div class="content">
                 <h4>{{curriculum.abbreviation}}</h4>
                 {{curriculum.name}}
@@ -15,7 +15,7 @@
     </div>
     <div id="year" class="span4" ng-class="{column2 : curriculumSelected != null, column1 : curriculumSelected == null  }">
         <ul class="small-show test" ng-show="curriculumSelected != null">
-        	<li ng-repeat="year in years" ng-click="yearClick(year)" ng-class="{column3 : yearSelected == year }">
+        	<li ng-repeat="year in years" ng-click="yearClick(year)" ng-class="{active : yearSelected == year }">
         	  <div class="content">
                 <h4>Year {{year.y}} Semester {{year.s}}</h4>
               </div>

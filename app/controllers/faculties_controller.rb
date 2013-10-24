@@ -5,16 +5,15 @@ class FacultiesController < ApplicationController
   # GET /faculties.json
   def index
     @faculties = Faculty.all
-
-    respond_to do |format|
-      format.html {  }
-      format.json { render :json => @faculties.to_json( :include => { :curriculums => {:include => :courses}} ) }
-    end
   end
 
   # GET /faculties/1
   # GET /faculties/1.json
   def show
+     respond_to do |format|
+      format.html {  }
+      format.json { render :json => @faculty.to_json( :include => { :curriculums => {:include => :courses}} ) }
+    end
   end
 
   # GET /faculties/new

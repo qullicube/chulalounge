@@ -1,4 +1,4 @@
-App.controller('PageNav', ['$scope','$resource','Course', function($scope, $resource, Course){
+App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 			
 			//Scrollbar
 			setTimeout(function() {
@@ -78,6 +78,7 @@ App.controller('PageNav', ['$scope','$resource','Course', function($scope, $reso
 
 					$scope.courses = [];
 					$scope.yearSelected = c;
+					console.log($scope.curriculumSelected.courses);
 					
 					for(var i=0;i<$scope.curriculumSelected.courses.length;i++){
 						if($scope.curriculumSelected.courses[i].academic_year == c.y &&
@@ -88,10 +89,12 @@ App.controller('PageNav', ['$scope','$resource','Course', function($scope, $reso
 				}
 			}
 
-			$scope.fetchData = function(id) {
-				$scope.faculty = $resource('/faculties/:facId').query({facId: id},function() {
-					$scope.curriculums = $scope.faculty[0].curriculums;
-				});
+			$scope.init = function(id) {
+				$http({method:'GET', url: '/faculties/' + id}).
+						success(function(data){
+							console.log(data);
+							$scope.curriculums = data.curriculums;		
+						});
 				$scope.years = [
 					{y:1,s:1},
 					{y:1,s:2},
@@ -108,8 +111,6 @@ App.controller('PageNav', ['$scope','$resource','Course', function($scope, $reso
 
 			$scope.curriculumSelected = null;
 			$scope.yearSelected = null;
-
-			$scope.fetchData($scope.id);
 
 			initSearchBar();
 

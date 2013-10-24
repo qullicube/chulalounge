@@ -124,7 +124,7 @@
 									description: "DC circuit analysis; Kirchhoff laws; Thevenin and Norton theorem, semiconductor devices; op amps; 
 											digital circuit; DC motor.",
 									academic_year: 2,
-									semester: 1
+									semester: 1,
 								},
 
 								{ 	title: "Electrical Circuits Lab",
@@ -808,25 +808,49 @@
 										{ 	id: 1 ,
 											name: "Information and Communication",
 											abbreviation: "ICE",
-											faculty_id: 1 
+											faculty_id: 1,
+											:courses => Course.where(:number=>[2140201,
+																				2140202,
+																				2143201,
+																				2143203,
+																				2143310
+																				])
 										},
 
 										{ 	id: 2 ,
 											name: "Automotive Design and Manufacturing",
 											abbreviation: "ADME",
-											faculty_id: 1  
+											faculty_id: 1,  
+											:courses => Course.where(:number=>[2142211,
+																				2142241,
+																				2142261,
+																				2301312,
+																				2304154,
+																				2304194])
 										},
 
 										{ 	id: 3 ,
 											name: "Aerospace",
 											abbreviation: "AERO",
-											faculty_id: 1  
+											faculty_id: 1,
+											:courses => Course.where(:number=>[2145201,
+																				2145211,
+																				2145212,
+																				2301201,
+																				2603284])
+
 										},
 
 										{ 	id: 4 ,
 											name: "Nano",
 											abbreviation: "NANO",
-											faculty_id: 1  
+											faculty_id: 1 ,
+											:courses => Course.where(:number=>[ 2141201,
+																				2141223,
+																				2141261,
+																				2141270,
+																				2302203,
+																				2302231])
 										}
 
 									])
@@ -875,20 +899,61 @@
 
 								])
 	Users = User.create ([
-		{id: 1,
+		{
+			id: 1,
 			name: "Fiam"
-		}
-		{id: 2,
+		},
+		{
+			id: 2,
 			name: "Poon"
 		}
 		])
 	Comments = Comment.create([
-		{ user_id: 1,
-			course_id: 1,
+		{ 
+			content: "This course is so so easy",
+			user_id: 1,
+			course_id: 1
+		},
+		{ 
+			content: "This course is ironically hard",
+			user_id: 2,
+			course_id: 1
 
 		}
-		{ user_id: 2,
-			course_id: 1,
+	])
 
+	Likes = Like.create([
+		{
+			user_id: 1,
+			comment_id: 1
 		}
-])
+
+		])
+
+	Dislikes = Dislike.create([
+		{
+			user_id:2,
+			comment_id:2
+		}
+
+		])
+	Professors = Professor.create([
+		{
+			name: "Sivabudj",
+			last_name: "Umpudh"
+		}
+		])
+
+	Teaches = Teach.create([
+		{
+			year: 2012,
+			professor_id: 1,
+			course_id: 1
+		},
+		{
+			year: 2013,
+			professor_id: 1,
+			course_id: 1
+		}
+		
+		])	
