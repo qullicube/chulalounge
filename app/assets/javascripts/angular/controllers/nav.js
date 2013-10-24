@@ -1,4 +1,4 @@
-App.controller('PageNav', ['$scope','Course','Faculty', function($scope, Course, Faculty){
+App.controller('PageNav', ['$scope','$resource','Course', function($scope, $resource, Course){
 			
 			//Scrollbar
 			setTimeout(function() {
@@ -40,7 +40,7 @@ App.controller('PageNav', ['$scope','Course','Faculty', function($scope, Course,
 			//Which column is currently selected?
 			$scope.selectedColumn = function(i) {
 				if(i == 3){
-					return $scope.curriculumSelected != null;
+					return $scope.curriculumSelected != null && $scope.yearSelected != null;
 				} else if(i==2){
 					return $scope.yearSelected == null && $scope.curriculumSelected != null;
 				} else {
@@ -61,38 +61,61 @@ App.controller('PageNav', ['$scope','Course','Faculty', function($scope, Course,
 					$scope.curriculumSelected = null;
 					$scope.yearSelected = null;
 				}
-				else
+				else if($scope.curriculumSelected != c && $scope.curriculumSelected != null){
+					$scope.yearSelected = null;
 					$scope.curriculumSelected = c;
+				}
+				else {
+					$scope.curriculumSelected = c;
+				}
 			}
 
 
 			$scope.yearClick = function(c) {
 				if($scope.yearSelected == c)
 					$scope.yearSelected = null;
-				else
+				else {
+
+					$scope.courses = [];
 					$scope.yearSelected = c;
+					
+					for(var i=0;i<$scope.curriculumSelected.courses.length;i++){
+						if($scope.curriculumSelected.courses[i].academic_year == c.y &&
+							$scope.curriculumSelected.courses[i].semester == c.s){
+							console.log('hi');
+							$scope.courses.push($scope.curriculumSelected.courses[i]);
+						}
+					}
+				}
 			}
 
 			$scope.fetchData = function(id) {
-				course
-			}
+				$scope.faculty = $resource('/faculties/:facId').query({facId: id},function() {
+					$scope.curriculums = $scope.faculty[0].curriculums;
+				});
+				$scope.years = [
+					{y:1,s:1},
+					{y:1,s:2},
+					{y:2,s:1},
+					{y:2,s:2},
+					{y:3,s:1},
+					{y:3,s:2},
+					{y:4,s:1},
+					{y:4,s:2}
+				];
 
+				$scope.courses = [];
+			}
 
 			$scope.curriculumSelected = null;
 			$scope.yearSelected = null;
 
-			$scope.curriculums = [
-				{title:'ICE', subtitle: 'Information and Communication'},
-				{title:'Others', subtitle: 'General Education'}
-			];
-			$scope.years = [1,2,3,4];
-			$scope.courses = [
-				{name: 'User Interface Design', number: 3140082}
-			];
+			$scope.fetchData($scope.id);
+
+			initSearchBar();
 
 			var mainHeight = function(){return $('#main').height(); }
 			
-			initSearchBar();
 			$scope.$watch(mainHeight, function(newValue, oldValue){
 				if(newValue != oldValue) $scope.resize(newValue);
 			});

@@ -8,7 +8,7 @@ class FacultiesController < ApplicationController
 
     respond_to do |format|
       format.html {  }
-      format.json { render :json => @faculties.to_json( :include => :curriculums ) }
+      format.json { render :json => @faculties.to_json( :include => { :curriculums => {:include => :courses}} ) }
     end
   end
 

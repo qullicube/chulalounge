@@ -1,6 +1,5 @@
 ChulaLounge::Application.routes.draw do
   resources :dislikes
-
   resources :likes
 
   resources :faculties
@@ -15,7 +14,7 @@ ChulaLounge::Application.routes.draw do
   root to: 'pages#index'
   get 'pages/nav/:id' => 'pages#nav'
   get 'pages/course/:id' => 'pages#course_index'
-  get 'pages/course/new' => 'pages#course_register'
+  get 'pages/course_register' => 'pages#course_register'
   
   
   namespace :api, defaults: {format: :json} do 

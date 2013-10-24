@@ -12,7 +12,6 @@ App.controller('PageCourseIndex', ['$scope', 'Course', function($scope, Course){
 	});
 
 	$scope.courses = Course.query();
-
 	$scope.top_reviews = [
 		{
 			author: 	"Jakkrapat Tangsongjaloen",

@@ -13,3 +13,7 @@ App.factory('Teach', ['$resource', function($resource){
 App.factory('Faculty', ['$resource', function($resource){
   return $resource('/faculties');
 }]); 
+
+App.factory('Curriculum', ['$resource', function($resource){
+  return $resource('/curriculums');
+}]); 
