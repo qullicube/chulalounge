@@ -14,28 +14,28 @@
 									description: "Fundamental engineering concepts and practices. Technology concepts and trends underlying current and future 
 											uses of information and communication technology. Introduction to engineering management including 
 											important aspects of management science.",
-									faculty: 'Engineering',
+									curriculum_id: 1,
 									academic_year: 2012
 								},
 
 								{ 	title: "English for Engineering I",
 									number: '5500111',
 									description: "Grammar; use of simple sentences; writing mechanics and process; writing and vision aids to good English.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2012
 								},
 
 								{ 	title: "Communicative English I",
 									number: '5501112',
 									description: "",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "English for Engineering II",
 									number: '5500222',
 									description: "Use of more complex sentences; expressive and creative writing; writing research papers and technical reports. ",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2012
 								},
 
@@ -43,7 +43,7 @@
 									number: '2301107',
 									description: "Limit, continuity, differentiation and integration of real valued functions of a real variable and their 
 											applications; techniques of integration; improper integrals.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -53,7 +53,7 @@
 											elementary functions; numerical integration; vectors, lines and planes in three dimensional space; calculus of 
 											vector valued functions of one variable; calculus of real valued functions of two variables; introduction to 
 											differential equations and their applications.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2012
 								},
 
@@ -61,7 +61,7 @@
 									number: '2304153',
 									description: "Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations and waves, 
 											elements of electromagnetism, optics, modern physics.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -69,7 +69,7 @@
 									number: '2304193',
 									description: "Measurement and precision; experiments on simple harmonic motion, radius of gyration, dynamics of rotation, 
 											velocity of sound, viscosity of fluids.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -77,14 +77,14 @@
 									number: '2190101',
 									description: "Computer concepts; computer components; hardware and software interaction; EDP concepts; program design 
 											and development methodology; high-level language programming. ",
-									faculty: 'Engineering',
+									curriculum_id: 1,
 									academic_year: 2013
 								},
 
 								{ 	title: "Computer Programming Lab",
 									number: '2190151',
 									description: "Programming in high-level language, programming tools, programming styles and convention, debugging.",
-									faculty: 'Engineering',
+									curriculum_id: 1,
 									academic_year: 2013
 								},
 
@@ -93,7 +93,7 @@
 									description: "Discrete probability; probability space, counting techniques, conditional probability and independent events, 
 											random variables, binomial and multinomial distributions, Poisson distribution, Bayes theorem, expected value, 
 											conditional expectation, variance; continuous probability.",
-									faculty: 'Engineering',
+									curriculum_id: 1,
 									academic_year: 2012
 								},
 
@@ -101,21 +101,21 @@
 									number: '2143110',
 									description: "Sets, relations, functions, theorem and proof; combinatorics; counting, principle of inclusion exclusion, 
 											recurrent relations, generating functions; graphs and trees; introduction to number theory. ",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2012
 								},
 
 								{ 	title: "Chemistry for Engineers",
 									number: '2302105',
 									description: "",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "General Chemistry Laboratory",
 									number: '2302103',
 									description: "",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 								#Year 2/1
@@ -123,14 +123,14 @@
 									number: '2140201',
 									description: "DC circuit analysis; Kirchhoff's laws; Thevenin's and Norton's theorem, semiconductor devices; op amps; 
 											digital circuit; DC motor.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "Electrical Circuits Lab",
 									number: '2140202',
 									description: "Practices on simple circuits.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -140,14 +140,14 @@
 											linear differential equations; Fourier series; Fourier transfroms; Laplace transforms; orthogonal functions and 
 											application to boundary value problems; introduction to complex analysis; advanced matrix algebra; vector 
 											calculus.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "Fundamental Data Structure and Algorithm",
 									number: '2143203',
 									description: "Basic data types, trees, basic operations on sets, sorting and searching, algorithm design techniques, memory management.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -157,14 +157,14 @@
 											cost analysis; break even point, Analysis of decisions in engineering under uncertainty; decision tree, expected 
 											monetary value and expected utility; expected value of perfect information and sampling information; basis for 
 											expected utility theory; rating and ranking of alternatives using multiple criteria; case studies.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 								#Year 2/2
 								{ 	title: "Technical Communication for International Engineers",
 									number: '2143222',
 									description: "How to write a descriptions or documents related to engineering",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -173,7 +173,7 @@
 									description: "Fundamental engineering concepts and practices. Technology concepts and trends underlying current and future 
 											uses of information and communication technology. Introduction to engineering management including 
 											important aspects of management science.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -182,7 +182,7 @@
 									description: "Application programming methodology; object-oriented programming, event-driven programming; 
 											Multithreading; error and exception handling; application programming interface (API), graphical user interface 
 											(GUI).",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -191,7 +191,7 @@
 									description: "Performance metrics; central processing unit; hardwired and microprogram of control units; instruction level 
 											parallelism: pipeline, superscalar; memory system: cache memory, virtual memory, disk array; development and 
 											future of architecture.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 								#Year 3/1
@@ -200,7 +200,7 @@
 									description: "Design tools and techniques, top down design, modular design, software tools, debugging, test data; software 
 											reliability, theory and concepts, errors and faults and estimating, reliability models, availability models; 
 											management techniques, cost estimation, software maintenance. ",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -211,7 +211,7 @@
 											normal forms of data relations; canonical schema, data independence; data description language; query 
 											facilities: relational algebra, relational calculus, data structures for establishing relations, query functions, design 
 											and translation strategies; file organization and file security: data integrity and reliability. ",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -219,7 +219,7 @@
 									number: '2143304',
 									description: "Operations strategies; inventory and distribution management; capacity management; aggregate planning; 
 											master production scheduling; material requirements planning; operation scheduling; project management.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -228,7 +228,7 @@
 									description: "Signal and noise analysis; analog and digital modulation and detection systems; Nyquist sampling theorem,
 											quantization; digital baseband systems; digital modulation such as ASK, PSK, FSK, MSK and QAM; information 
 											transmission, synchronization and channel coding; applications of communication systems.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 								#Year 3/2
@@ -238,14 +238,14 @@
 											twisted pair, coaxcial cable, terrestrial microwave system, satellite microwave system, optical fiber system; 
 											switching architecture, circuit and packet; basic queuing theory and traffic analysis; network design and 
 											optimization; OSI model; Broadband networks, IP networks, WDM networks, SONET/SDH, Gigabit networks.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "Engineering Management for International Engineers",
 									number: '2143310',
 									description: "Risk Mangement, Finance, Quality Management,",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -254,7 +254,7 @@
 									description: "Enterprise information systems; information technology infrastructure; impact of information systems on 
 											organizations; information technology and business strategy; e-business and e-commerce; ethical and social 
 											issues related to technology; technology decisions; business value of information systems.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013		
 								},
 
@@ -262,7 +262,7 @@
 									number: '2143324',
 									description: "Essence of software project management; scope of software project; project management approaches; project 
 											estimation; software quality assurance; case study on project life cycle.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -273,7 +273,7 @@
 											detection, error correction, data link control protocols), Point-to-point protocols at network layer (routing, flow 
 											control, error recovery), Delay models (basic queuing theory), Multi-access communications (Aloha, CSMA, 
 											multi-access reservations), System design considerations.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 								#Year 4/1
@@ -282,7 +282,7 @@
 									description: "Introduction to Multimedia Engineering. Text Coding Standards Image Coding Standards. Video Coding 
 											Standards. Audio Coding Standards. Speech Coding Standards. IP networks. Wireless networks. Multimedia 
 											Communication Protocols. Multimedia Communication Applications.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -291,14 +291,14 @@
 									description: "Telecommunication Technology and Trends. Telecommunication Markets. Telecommunication Economics. 
 											Telecommunication Law and Policy. Telecommunication Licensing. Competition in Telecommunication 
 											Business. Telecommunication Project Management.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "User Interface Design",
 									number: '2143416',
 									description: "Design, implementation, and evaluation of human computer interfaces",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -307,7 +307,7 @@
 									description: "Introduction to ubiquitous computing, overview and basic terminologies, visions and fundamental challenges, 
 											wireless transport, mobile IP, wireless ad hoc networks, wireless sensor networks, medium access control for 
 											wireless sensor networks, middleware, programming wireless networks of embedded systems.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -315,7 +315,7 @@
 									number: '2143420',
 									description: "Stochastic processes and models in operations research; discrete and continuous time parameter; Markov chains; 
 											queuing theory; inventory theory; simulation",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -324,21 +324,21 @@
 									description: "Introduction to the theory, algorithms, and applications of optimization; optimization methodologies: linear 
 											programming, network optimization, integer programming, decision trees, and dynamic programming; 
 											applications to logistics, manufacturing, transportation, marketing, project management and finance.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "Modern Web Development in Practice",
 									number: '2143496',
 									description: "Developing Web using Ruby on rails",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "High Technology Entrepreneurship",
 									number: '2143423',
 									description: "Becoming a new startup",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -349,7 +349,7 @@
 											The concepts introduced include overloading, multiple inheritance and polymorphism; the analysis, design and 
 											implementation phases of software development, use case driven object-oriented development methodology, 
 											and design patterns and Unified Modelling Language (UML).",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2012
 								},
 
@@ -360,7 +360,7 @@
 											of non-queuing/loss-type system and queuing/delay-type system; modeling of system with mobile users; 
 											fundamentals of network simulation; real-time network management and long-term network planning; 
 											application of optimization techniques in network controls; case studies in network design.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 								#Year4/2
@@ -371,7 +371,7 @@
 											UDP), Reliable data transfer, Congestion control, Virtual circuit and datagram networks, The Internet Protocol 
 											(IP), Routing in the Internet, Broadcast and multicast routing, Multimedia networking, Security in computer 
 											networks, Network management.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -382,7 +382,7 @@
 											standards for Communication Systems Integration; Compatibility and Interoperability Analysis; Hardware vs. 
 											Software Integration; Network Integration; Enterprise Application Integration; Management of Risk from 
 											Integration; Interpersonal skills and Communications for System Engineer; Case Studies in System Integration.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -392,7 +392,7 @@
 											transmission line analysis for pulse waveforms, basic of plane wave propagation in free space, basic of signal 
 											transmission in optical fiber, signal dispersion in optical fiber, fundamental of antenna, basic antenna 
 											parameters, design of transmission link, link budget.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -402,21 +402,21 @@
 											physical security; discretionary and mandatory access control; biometrics; information-flow models of security; 
 											covert channels; elementary cryptography; public-key cryptography; logic of authentication; electronic cash; 
 											viruses; firewalls; electronic voting; risk assessment; secure web browsers.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "Game Design and Development Process",
 									number: '2143425',
 									description: "",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: "Computer Graphics",
 									number: '2143424',
 									description: "",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -426,7 +426,7 @@
 											inventory/service tradeoffs; performance measurement and incentives; global supply chain management; mass 
 											customization; supplier management; design and redesign of products and processes for supply chain 
 											management; tools for analysis; industrial applications; current industry initiatives.",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
@@ -437,14 +437,14 @@
 											control; multiple antenna and MIMO systems; space-time codes and decoding algorithms; multiple-access 
 											techniques and multiuser detection; cellular and ad-hoc network topologies; OFDM and ultrawideband systems; 
 											Wireless LANs and MANs, cellular system standards. ",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 
 								{ 	title: " Data Warehousing ",
 									number: '2143411',
 									description: "Data warehouse design, Data Modeling, database design and database access",
-									faculty: 'Engineering',
+									curriculum_id: 5,
 									academic_year: 2013
 								},
 

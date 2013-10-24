@@ -1,7 +1,7 @@
 App.controller('PageCourseIndex', ['$scope', 'Course', function($scope, Course){
 
 	var focus_duration = 800;
-
+	
 	$("#review-post").bind('input propertychange', function() {
 		if($("#review-post").val() != "" && !$("#review-post").hasClass('on')){
 			$("#review-post").clearQueue().toggleClass('on', focus_duration);

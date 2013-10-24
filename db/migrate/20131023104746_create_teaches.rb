@@ -1,8 +1,8 @@
 class CreateTeaches < ActiveRecord::Migration
   def change
     create_table :teaches do |t|
-      t.integer :professor_id
-      t.integer :course_id
+      t.belongs_to :professor
+      t.belongs_to :course
       t.integer :year
 
       t.timestamps

@@ -9,3 +9,7 @@ App.factory('Professor', ['$resource', function($resource){
 App.factory('Teach', ['$resource', function($resource){
   return $resource('/teaches');
 }]); 
+
+App.factory('Faculty', ['$resource', function($resource){
+  return $resource('/faculties');
+}]); 

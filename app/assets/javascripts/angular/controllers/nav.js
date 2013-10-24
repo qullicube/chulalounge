@@ -1,4 +1,4 @@
-App.controller('PageNav', ['$scope','Course', function($scope, Course){
+App.controller('PageNav', ['$scope','Course','Faculty', function($scope, Course, Faculty){
 			
 			//Scrollbar
 			setTimeout(function() {
@@ -13,28 +13,40 @@ App.controller('PageNav', ['$scope','Course', function($scope, Course){
 					cursorpacitymax: 0.5
 				});
 			});
-			//SEARCH TOGGLING
 
-		   	var focus_duration = 800;
-		   	var wait_duration = 2000;
+			//Searchbar
+			var initSearchBar = function(){
+			   	var focus_duration = 800;
+			   	var wait_duration = 2000;
 
-			$("#search-tool .footer").click(function() {
-				if(!$("#search-course").is(":focus")){
-					$("#search-course").focus();
-				}
-			});
-
-			$("#search-course").focus(function(){
-				$("#search-tool").clearQueue().switchClass("span4", "span12", focus_duration);
-			});
-
-			$("#search-course").blur(function(){
-				setTimeout(function(){
+				$("#search-tool .footer").click(function() {
 					if(!$("#search-course").is(":focus")){
-					$("#search-tool").clearQueue().switchClass("span12", "span4", focus_duration);
-				}},wait_duration);
-			});
+						$("#search-course").focus();
+					}
+				});
 
+				$("#search-course").focus(function(){
+					$("#search-tool").clearQueue().switchClass("span4", "span12", focus_duration);
+				});
+
+				$("#search-course").blur(function(){
+					setTimeout(function(){
+						if(!$("#search-course").is(":focus")){
+						$("#search-tool").clearQueue().switchClass("span12", "span4", focus_duration);
+					}},wait_duration);
+				});
+			}
+
+			//Which column is currently selected?
+			$scope.selectedColumn = function(i) {
+				if(i == 3){
+					return $scope.curriculumSelected != null;
+				} else if(i==2){
+					return $scope.yearSelected == null && $scope.curriculumSelected != null;
+				} else {
+					return $scope.curriculumSelected == null && $scope.yearSelected == null;
+				}
+			}
 
 			$scope.resize = function(height) {
 				//var height = $("#main").height() + $("#search-tool").height()-1;
@@ -45,8 +57,10 @@ App.controller('PageNav', ['$scope','Course', function($scope, Course){
 
 
 			$scope.curriculumClick = function(c) {
-				if($scope.curriculumSelected == c)
+				if($scope.curriculumSelected == c){
 					$scope.curriculumSelected = null;
+					$scope.yearSelected = null;
+				}
 				else
 					$scope.curriculumSelected = c;
 			}
@@ -57,6 +71,10 @@ App.controller('PageNav', ['$scope','Course', function($scope, Course){
 					$scope.yearSelected = null;
 				else
 					$scope.yearSelected = c;
+			}
+
+			$scope.fetchData = function(id) {
+				course
 			}
 
 
@@ -74,6 +92,7 @@ App.controller('PageNav', ['$scope','Course', function($scope, Course){
 
 			var mainHeight = function(){return $('#main').height(); }
 			
+			initSearchBar();
 			$scope.$watch(mainHeight, function(newValue, oldValue){
 				if(newValue != oldValue) $scope.resize(newValue);
 			});

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024040614) do
+ActiveRecord::Schema.define(version: 20131024113705) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -26,10 +26,15 @@ ActiveRecord::Schema.define(version: 20131024040614) do
     t.string   "title"
     t.integer  "number"
     t.text     "description"
-    t.string   "faculty"
     t.integer  "academic_year"
+    t.integer  "semester"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "courses_curriculums", force: true do |t|
+    t.integer "course_id"
+    t.integer "curriculum_id"
   end
 
   create_table "curriculums", force: true do |t|
@@ -40,9 +45,23 @@ ActiveRecord::Schema.define(version: 20131024040614) do
     t.datetime "updated_at"
   end
 
+  create_table "dislikes", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "comment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "faculties", force: true do |t|
     t.string   "name"
     t.string   "abbreviation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "likes", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,7 @@
-<div class="body container-fluid page-nav" ng-controller="PageNav">
-  <div id="main" class="row-fluid" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
+<div class="body container-fluid page-nav" ng-controller="PageNav" ng-init="id=<%= @id %>">
+  <div id="main" class="row-fluid" ng-class="{column3 : selectedColumn(3),
+   column2 : selectedColumn(2),
+   column1 : selectedColumn(1)}">
     <div id="curriculum" class="span4">
         <ul class="big-show">
           <li ng-repeat="curriculum in curriculums" ng-click="curriculumClick(curriculum)" ng-class="{column2 : curriculumSelected == curriculum}">

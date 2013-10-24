@@ -4,9 +4,8 @@ class CreateCourses < ActiveRecord::Migration
       t.string :title
       t.integer :number
       t.text :description
-      t.integer :currculum_id
       t.integer :academic_year
-
+      t.integer :semester
       t.timestamps
     end
   end

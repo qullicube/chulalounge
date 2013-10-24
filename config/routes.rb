@@ -1,4 +1,8 @@
 ChulaLounge::Application.routes.draw do
+  resources :dislikes
+
+  resources :likes
+
   resources :faculties
   resources :curriculums
   resources :teaches
@@ -12,7 +16,8 @@ ChulaLounge::Application.routes.draw do
   get 'pages/nav/:id' => 'pages#nav'
   get 'pages/course/:id' => 'pages#course_index'
   get 'pages/course/new' => 'pages#course_register'
-
+  
+  
   namespace :api, defaults: {format: :json} do 
     resources :courses
   end
