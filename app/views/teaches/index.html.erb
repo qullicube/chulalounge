@@ -3,8 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Course</th>
       <th>Professor</th>
+      <th>Course</th>
+      <th>Year</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,8 +15,9 @@
   <tbody>
     <% @teaches.each do |teach| %>
       <tr>
-        <td><%= teach.course_id %></td>
         <td><%= teach.professor_id %></td>
+        <td><%= teach.course_id %></td>
+        <td><%= teach.year %></td>
         <td><%= link_to 'Show', teach %></td>
         <td><%= link_to 'Edit', edit_teach_path(teach) %></td>
         <td><%= link_to 'Destroy', teach, method: :delete, data: { confirm: 'Are you sure?' } %></td>

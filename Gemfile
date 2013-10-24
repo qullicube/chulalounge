@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'designmodo-flatuipro-rails'
 gem 'angularjs-rails'
+gem 'angularjs-rails-resource'
 
 group :doc do
 	gem 'sdoc', require: false

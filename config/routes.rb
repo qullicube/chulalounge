@@ -1,20 +1,21 @@
 ChulaLounge::Application.routes.draw do
   resources :teaches
-
   resources :courses
-
   resources :ratings
-
   resources :comments
-
   resources :professors
-
   resources :users
 
-  get "pages/index"
-  get "pages/nav"  
-  get "pages/course_index"
+  root to: 'pages#index'
+  get 'pages/nav'
+  get 'pages/course_index'
+  get 'pages/course_register'
 
+  namespace :api, defaults: {format: :json} do 
+    resources :courses
+  end
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

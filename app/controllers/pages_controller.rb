@@ -1,14 +1,6 @@
 class PagesController < ApplicationController
   def index
   end
-
-  def nav
+  def course_register
   end
-
-  def course_index
-  end
-
-  def course_info
-  end
-  
 end

@@ -1,7 +1,9 @@
-App.controller('PageNav', ['$scope','Test', function($scope, Test){
+App.controller('PageNav', ['$scope','Course', function($scope, Course){
+			
 			//SEARCH TOGGLING
 
 		   	var focus_duration = 800;
+		   	var wait_duration = 2000;
 
 			$("#search-tool .footer").click(function() {
 				if(!$("#search-course").is(":focus")){
@@ -17,12 +19,8 @@ App.controller('PageNav', ['$scope','Test', function($scope, Test){
 				setTimeout(function(){
 					if(!$("#search-course").is(":focus")){
 					$("#search-tool").clearQueue().switchClass("span12", "span4", focus_duration);
-				}},2000);
+				}},wait_duration);
 			});
-
-			//TODO: turn this to ngAnimate
-
-
 
 
 			$scope.resize = function(height) {

@@ -1,4 +1,4 @@
-App.controller('PageIndex', ['$scope', function($scope){
+App.controller('PageIndex', ['$scope','Course','Comment', function($scope, Course, Comment){
 	$scope.catalogs = [
 		{name: "ISE"},
 		{name: "BBA"},
@@ -10,5 +10,9 @@ App.controller('PageIndex', ['$scope', function($scope){
 		{name: "BALAC"},
 		{name: "OTHERS"}
 	];
+
+	Course.query().then(function(courses) {
+		$scope.course = courses;
+	});
 
 }]);

@@ -5,6 +5,10 @@ class ProfessorsController < ApplicationController
   # GET /professors.json
   def index
     @professors = Professor.all
+
+    respond_to do |format|
+      format.json {render json:Professor.all}
+    end
   end
 
   # GET /professors/1
