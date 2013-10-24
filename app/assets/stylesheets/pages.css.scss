@@ -328,7 +328,6 @@ input[type="search"]::-webkit-input-placeholder{
 	}
 	.box {
 		border:1px solid rgb(189, 195, 199);
-		border-top:0;
 		padding:12px;
 	}
 	.filter-wrapper {
@@ -436,4 +435,7 @@ input[type="search"]::-webkit-input-placeholder{
 			height:150px;
 		}
 	}
+  #review {
+  margin-top: 5px;
+  }
 }
