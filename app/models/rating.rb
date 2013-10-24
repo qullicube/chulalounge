@@ -1,4 +1,4 @@
 class Rating < ActiveRecord::Base
-	belongs_to :users
-	belongs_to :courses
+	belongs_to :user
+	belongs_to :course
 end

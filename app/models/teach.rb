@@ -1,4 +1,4 @@
 class Teach < ActiveRecord::Base
-	belongs_to :professors
-	belongs_to :courses
+	belongs_to :professor
+	belongs_to :course
 end

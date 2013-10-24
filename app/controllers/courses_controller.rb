@@ -24,7 +24,6 @@ class CoursesController < ApplicationController
   # POST /courses
   # POST /courses.json
   def create
-    raise ''
     @course = Course.new(course_params)
 
     respond_to do |format|

@@ -20,13 +20,12 @@ $box:rgb(219, 222, 224);
 
 
 /*================ NAV =============== */
-.nav {
+.page-nav {
 /* Variables */
 
 $column1: rgb(219, 222, 224);
 $column2: rgb(236, 240, 241);
 $column3: white;
-
 
 ul {
 	margin: 0;
@@ -44,7 +43,7 @@ ul {
   padding: 22px 0px 20px 0px;
 }
 
-.body {
+&.body {
   color: rgb(127, 130, 133);
 
   * {
@@ -205,15 +204,13 @@ input[type="search"]::-webkit-input-placeholder{
 }
 
 #year {
-  overflow:hidden;
-  height:100%;
+  overflow:auto;
   li.active {
     background: $column3;
   }
 }
 
 #course {
-  height:100%;
   li {
     padding: 17px 16px 3px 16px;
   }

@@ -1,5 +1,18 @@
 App.controller('PageNav', ['$scope','Course', function($scope, Course){
 			
+			//Scrollbar
+			setTimeout(function() {
+				$("#year").niceScroll({
+					cursorfixedheight: 50,
+					cursorwidth:3,
+					cursorpacitymax: 0.5
+				});
+				$("#course").niceScroll({
+					cursorfixedheight: 50,
+					cursorwidth:3,
+					cursorpacitymax: 0.5
+				});
+			});
 			//SEARCH TOGGLING
 
 		   	var focus_duration = 800;
