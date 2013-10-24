@@ -70,7 +70,8 @@ App.controller('PageCourseIndex', ['$scope', '$http', function($scope, $http){
 	}
 
 	$scope.init = function(id) {
-		$scope.course = $http({method:'GET', url: '/courses/' + id}).
+		
+	$http({method:'GET', url: '/courses/' + id}).
 		  success(function(data) {
 		  		$scope.course = data;
 				$scope.comments = $scope.course.comments;

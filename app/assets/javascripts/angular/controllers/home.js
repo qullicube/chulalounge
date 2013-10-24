@@ -1,18 +1,8 @@
-App.controller('PageIndex', ['$scope','Course','Comment', function($scope, Course, Comment){
-	$scope.catalogs = [
-		{name: "ISE"},
-		{name: "BBA"},
-		{name: "EBA"},
-		{name: "JIPP"},
-		{name: "BALAC"},
-		{name: "OTHERS"},
-		{name: "JIPP"},
-		{name: "BALAC"},
-		{name: "OTHERS"}
-	];
+App.controller('PageIndex', ['$scope', '$http',function($scope, $http){
 
-	Course.query().then(function(courses) {
-		$scope.course = courses;
-	});
+	$http({method:'GET', url: '/faculties'}).
+		success(function(data){
+			$scope.faculties = data;		
+		});
 
 }]);
