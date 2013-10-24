@@ -1,4 +1,5 @@
 App.controller('PageCourseRegister', ['$scope', 'Course', 'Professor','Teach', 
+	
 	function($scope, Course, Professor, Teach) {
 
 	var today = new Date();

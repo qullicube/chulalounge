@@ -10,9 +10,22 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
-      respond_to do |format|
-      format.html {  }
-      format.json { render :json => @course.to_json( :include => { :teaches => {:include => :professors }, :ratings =>{}, :comments=>{}} ) }
+    @teaches = @course.teaches.group_by &:year
+    @m = {}
+    @teaches.each do |k,v|
+      @m[k] = []
+      @teaches[k].each do |i|
+        @m[k].push(Professor.find(i.professor_id))
+      end
+    end
+
+    @teaches = @m
+
+    @comments = @course.comments
+    @users = []
+    @comments.each do |i|
+      c = Comment.find(i.id)
+      @users.push(c.user)
     end
   end
 

@@ -1,4 +1,4 @@
-App.controller('PageCourseIndex', ['$scope', '$resource', function($scope, $resource){
+App.controller('PageCourseIndex', ['$scope', '$http', function($scope, $http){
 
 	var focus_duration = 800;
 	
@@ -12,7 +12,7 @@ App.controller('PageCourseIndex', ['$scope', '$resource', function($scope, $reso
 	});
 
 	var average = function(array, name) {
-		if(array.length != 0) {
+		if(array.length > 0) {
 			var sum = 0;
 			for(var i = 0; i < array.length; i++){
 				sum += array[i][name];
@@ -23,40 +23,65 @@ App.controller('PageCourseIndex', ['$scope', '$resource', function($scope, $reso
 		}
 	}
 
-	$scope.course = $resource('/courses/:courseId').query({courseId: $scope.id}, function() {
-		$scope.comments = $scope.course.comments;
-		
-			for(int i=0; i<$scope.comments.length; i++ ){
-				$resource('/comments/:commentId').query({commentId: $scope.comments[i].id}, function() {
+	var readjustTeach = function(tArray) {
+		//format
+		var f = {
+			year: 2013,
+			professors: []
+		}
+
+		f = [];
+
+		angular.forEach(tArray, function(value, key) {
+			f.push({year: parseInt(key), professors:value});
+		});
+
+		return f;
+
+	}
+	var topComments = function(array) {
+		if(array.length > 2) {
+			var index1 = 0;
+			var index2 = 1;
+
+			for(var i =2;i<array.length;i++){
+				
+				if(array[index1].likes == array[i].likes){
+					index1 = (array[index1].dislikes < array[i].dislikes) ? index1 : i
+				}
+				else if(array[index2].likes == array[i].likes){
+					index1 = (array[index2].dislikes < array[i].dislikes) ? index1 : i
+				}
+				else if(array[index1].likes < array[i].likes ||
+				   array[index2].likes < array[i].likes){
 					
-				});
+					if(array[index1].likes < array[i].likes && array[index2].likes > array[i].likes)
+						index1 = i;
+					else
+						index2 = i;
+				} 
 			}
 
-		$scope.rating = {
-			know_rating : average($scope.ratings,'know_rating'),
-			diff_rating : average($scope.ratings,'diff_rating'),
-			grade_rating : average($scope.ratings,'grade_rating')
+			return [array[index1], array[index2]];
 		}
-
-	});
-
-	$scope.top_comments = [
-		{
-			author: 	"Jakkrapat Tangsongjaloen",
-			comment: 	"I am the best in this subject.",
-			like: 		42,
-			dislike: 	2,
-			timestamp:  "Aug 22, 2013"
-		},
-		{
-			author: 	"Decha Tesapirat",
-			comment:    "I did not want to take this course, but my friends forced me to. I don't want to take my extra time doing something that I hate. I just want to program my android application at home on free time T____T.",
-			like:       12,
-			dislike:    10,
-			timestamp:  "Sept 10, 2013" 
+		else {
+			return array;
 		}
-	];
+	}
 
-	$scope.profs = [1,2,3,4,5];
+	$scope.init = function(id) {
+		$scope.course = $http({method:'GET', url: '/courses/' + id}).
+		  success(function(data) {
+		  		$scope.course = data;
+				$scope.comments = $scope.course.comments;
+				$scope.top_comments = topComments($scope.course.comments);
+				$scope.teaches = readjustTeach($scope.course.teaches);
+				$scope.rating = {
+					know_rating : average($scope.course.ratings,'know_rating'),
+					diff_rating : average($scope.course.ratings,'diff_rating'),
+					grade_rating : average($scope.course.ratings,'grade_rating')
+				}
+			});
+	}
 
 }]);
