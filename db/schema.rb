@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20131024113705) do
     t.string   "title"
     t.integer  "number"
     t.text     "description"
+    t.string   "faculty"
     t.integer  "academic_year"
-    t.integer  "semester"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
