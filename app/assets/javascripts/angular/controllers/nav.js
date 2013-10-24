@@ -82,7 +82,6 @@ App.controller('PageNav', ['$scope','$resource','Course', function($scope, $reso
 					for(var i=0;i<$scope.curriculumSelected.courses.length;i++){
 						if($scope.curriculumSelected.courses[i].academic_year == c.y &&
 							$scope.curriculumSelected.courses[i].semester == c.s){
-							console.log('hi');
 							$scope.courses.push($scope.curriculumSelected.courses[i]);
 						}
 					}

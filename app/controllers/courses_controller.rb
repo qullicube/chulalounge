@@ -4,12 +4,16 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+      @courses = Course.all
   end
 
   # GET /courses/1
   # GET /courses/1.json
   def show
+      respond_to do |format|
+      format.html {  }
+      format.json { render :json => @course.to_json( :include => { :teaches => {:include => :professors }, :ratings =>{}, :comments=>{}} ) }
+    end
   end
 
   # GET /courses/new

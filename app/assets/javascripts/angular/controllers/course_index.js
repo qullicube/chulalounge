@@ -1,4 +1,4 @@
-App.controller('PageCourseIndex', ['$scope', 'Course', function($scope, Course){
+App.controller('PageCourseIndex', ['$scope', '$resource', function($scope, $resource){
 
 	var focus_duration = 800;
 	
@@ -11,8 +11,36 @@ App.controller('PageCourseIndex', ['$scope', 'Course', function($scope, Course){
 		}
 	});
 
-	$scope.courses = Course.query();
-	$scope.top_reviews = [
+	var average = function(array, name) {
+		if(array.length != 0) {
+			var sum = 0;
+			for(var i = 0; i < array.length; i++){
+				sum += array[i][name];
+			}
+			return sum/array.length;
+		} else {
+			return 'NaN';
+		}
+	}
+
+	$scope.course = $resource('/courses/:courseId').query({courseId: $scope.id}, function() {
+		$scope.comments = $scope.course.comments;
+		
+			for(int i=0; i<$scope.comments.length; i++ ){
+				$resource('/comments/:commentId').query({commentId: $scope.comments[i].id}, function() {
+					
+				});
+			}
+
+		$scope.rating = {
+			know_rating : average($scope.ratings,'know_rating'),
+			diff_rating : average($scope.ratings,'diff_rating'),
+			grade_rating : average($scope.ratings,'grade_rating')
+		}
+
+	});
+
+	$scope.top_comments = [
 		{
 			author: 	"Jakkrapat Tangsongjaloen",
 			comment: 	"I am the best in this subject.",
