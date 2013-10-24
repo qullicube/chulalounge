@@ -23,8 +23,8 @@ $box:rgb(219, 222, 224);
 .page-nav {
 /* Variables */
 
-$column1: rgb(219, 222, 224);
-$column2: rgb(236, 240, 241);
+$column1: white;
+$column2: white;
 $column3: white;
 
 ul {
@@ -44,8 +44,7 @@ ul {
 }
 
 &.body {
-  color: rgb(127, 130, 133);
-
+  color: #D13200;
   * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -80,11 +79,13 @@ ul {
   h4 {
     font-size: 17px;
     font-weight: 700;
-    color: white;
+    color: #D13200;
   }
   li {
-    padding: 28px 28px 20px 28px;
+    padding: 41px 28px 33px 28px;
     color: white;
+    border-top: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
     .fui-arrow-right {
       font-size: 18px;
       line-height: 35px;
@@ -96,9 +97,12 @@ ul {
   list-style: none;
   li {
     padding: 17px 16px 17px 16px;
+    border-top: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
   }
   h4 {
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 600;
   }
   a:hover {
     background-color:transparent;
@@ -129,7 +133,7 @@ ul {
 }
 
 .footer {
-  background-color: #e74c3c;
+  background-color: #A22700;
   bottom: 0;
   color: white;
   font-size: 19px;

@@ -94,8 +94,6 @@ ActiveRecord::Schema.define(version: 20131024113705) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "password"
-    t.integer  "comment_id"
-    t.integer  "rating_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

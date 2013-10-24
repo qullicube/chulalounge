@@ -9,7 +9,7 @@
 
 	
 	courses = Course.create([#ICE - Course
-								{ 	title: "Introduction to ICE",
+=begin								{ 	title: "Introduction to ICE",
 									number: '2143101',
 									description: "Fundamental engineering concepts and practices. Technology concepts and trends underlying current and future 
 											uses of information and communication technology. Introduction to engineering management including 
@@ -118,20 +118,20 @@
 									curriculum_id: 5,
 									academic_year: 2013
 								},
-								#Year 2/1
+=end								#Year 2/1
 								{ 	title: "Electrical Circuits",
 									number: '2140201',
-									description: "DC circuit analysis; Kirchhoff's laws; Thevenin's and Norton's theorem, semiconductor devices; op amps; 
+									description: "DC circuit analysis; Kirchhoff laws; Thevenin and Norton theorem, semiconductor devices; op amps; 
 											digital circuit; DC motor.",
-									curriculum_id: 5,
-									academic_year: 2013
+									academic_year: 2013,
+									semester: 1
 								},
 
 								{ 	title: "Electrical Circuits Lab",
 									number: '2140202',
 									description: "Practices on simple circuits.",
-									curriculum_id: 5,
-									academic_year: 2013
+									academic_year: 2013,
+									semester: 1
 								},
 
 								{ 	title: "Advanced Mathematics Methods",
@@ -140,15 +140,15 @@
 											linear differential equations; Fourier series; Fourier transfroms; Laplace transforms; orthogonal functions and 
 											application to boundary value problems; introduction to complex analysis; advanced matrix algebra; vector 
 											calculus.",
-									curriculum_id: 5,
-									academic_year: 2013
+									academic_year: 2013,
+									semester: 1
 								},
 
 								{ 	title: "Fundamental Data Structure and Algorithm",
 									number: '2143203',
 									description: "Basic data types, trees, basic operations on sets, sorting and searching, algorithm design techniques, memory management.",
-									curriculum_id: 5,
-									academic_year: 2013
+									academic_year: 2013,
+									semester: 1
 								},
 
 								{ 	title: "Engineering Economic and Data Analysis",
@@ -157,10 +157,10 @@
 											cost analysis; break even point, Analysis of decisions in engineering under uncertainty; decision tree, expected 
 											monetary value and expected utility; expected value of perfect information and sampling information; basis for 
 											expected utility theory; rating and ranking of alternatives using multiple criteria; case studies.",
-									curriculum_id: 5,
-									academic_year: 2013
+									academic_year: 2013,
+									semester: 1
 								},
-								#Year 2/2
+=begin								#Year 2/2
 								{ 	title: "Technical Communication for International Engineers",
 									number: '2143222',
 									description: "How to write a descriptions or documents related to engineering",
@@ -447,7 +447,430 @@
 									curriculum_id: 5,
 									academic_year: 2013
 								},
-
+=end
 							#Nano Course
+								#Year 2/1
+								{ 	title: "Engineering Materials II",
+									number: '2141201',
+									description: "High-temperature materials: reactions of metals with various environmental media at 
+											high temperature; mechanism of creep; diffusion of vacancies; screw and edge 
+											dislocation movement; grain boundary sliding; selection of metals for high-temperature 
+											ambient. Refractory materials and their classification; properties of important refractory 
+											materials; composite materials: types and properties of composite materials; fiber and 
+											their interfaces; geometrical properties; elasticity; nanomaterials.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Mathematics for Nanotechnology",
+									number: '2141223',
+									description: "Mathematical knowledge and skills for nanotechnology.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Statics and Mechanics of Materials",
+									number: '2141261',
+									description: "Analysis of force systems and their equilibria as applied to engineering systems. Stresses 
+											and strains; mechanical properties of materials; hooke law, elastic modulus, stress in 
+											beam, shear force, bending moment diagram, torsion, buckling of columns, mohr circle.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Electrical Circuits",
+									number: '2141270',
+									description: "Circuit elements; Kirchhoff laws and reference directions; elementary concepts of 
+											network graphs; resistive circuits; node and mesh analysis; Thevenin theorem and Norton 
+											theorem; first-order and second- order circuits; step responses; zero-input and zero-state 
+											responses; transient and steady-stale responses; exponential excitations; elementary 
+											transfer functions; periodic waveforms; Fourier series; sinusoidal waveforms; phasor 
+											representations; impedances and admittances; sinusoidal steady-state analysis; 
+											frequency responses; three-phase circuits.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Organic Chemistry Laboratory",
+									number: '2302203',
+									description: "Fundamental laboratory techniques concerning the separation, purification and 
+											determination of physical constants of organic compounds; chemical reactions of organic 
+											compounds of various functional groups; synthesis of certain target molecules.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Physical Chemistry 1",
+									number: '2302231',
+									description: "The nature of physical chemistry; gases and liquids; solid states; symmetry; atomic 
+											structure and quantum chemistry; chemical bonding; the investigation for molecular 
+											structure; nuclear chemistry; the laws of chemical thermodynamics; free energy and 
+											chemical equilibrium; phases rule.",
+									academic_year: 2013,
+									semester: 1
+								},
+=begin								#Year 2/2
+								{ 	title: "Dynamics and Vibrations",
+									number: '2141263',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Electronic Devices I",
+									number: '2141273',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Electrical and Electronics Laboratory",
+									number: '2141274'
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Biochemistry for NANO Engineers",
+									number: '2310229',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Statistic for Physical Science",
+									number: '2603284',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+								#Year 3/1
+								{ 	title: "Material Characterization",
+									number: '2141303',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Measurement and Instrumentation",
+									number: '2141375',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Micro and NanofabricationTechnology",
+									number: '2141310',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Quantum Mechanics for Engineers",
+									number: '2141331',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nanopolymer Engineering",
+									number: '2141341',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Molecular Chemistry",
+									number: '2141345',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Reaction Engineering",
+									number: '2141346',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Fluid Mechanics for International Engineers",
+									number: '2141365',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+								#Year 3/2
+								{ 	title: "Transport Phenomena",
+									number: '2141366',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Statistical Thermodynamics",
+									number: '2141368',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+
+								{ 	title: "Control Engineering ",
+									number: '2141376',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2012
+								},
+								#Year 4/1
+								{ 	title: "IT for Communications",
+									number: '2141481',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nano Seminar",
+									number: '2141490',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Research Methodology",
+									number: '2141491',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Electronic Device II",
+									number: '2141473',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Introduction to VLSI Technolgy",
+									number: '2141475',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Effective Problem Solving for Industry",
+									number: '2141513',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nanomaterial Synthesis by Aerosol Process",
+									number: '2141553',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Cell and Molecular Biology",
+									number: '2141591',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Microbionanotechnology",
+									number: '2141511',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Microbionanotechnology",
+									number: '2141551',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+
+								{ 	title: "Nanoelectronics",
+									number: '2141417',
+									description: "",
+									curriculum_id: ,
+									academic_year: 2013
+								},
+								#Year 4/2
+=end
+							#Aero
+							#Year 2/1
+								{ 	title: "Introduction to Mechanics",
+									number: '2145201',
+									description: "Analysis of force systems and their equilibrium as applied to engineering systems; stresses and strains; 
+											mechanical properties of materials; hooke law, elastic modulus, stress in beam, shear force, bending moment 
+											diagram, torsion, buckling of columns, mohr circle, fundamental of dynamics.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Introduction to Aerospace Engineering",
+									number: '2145211',
+									description: "Basic aerodynamic phenomena and simplified theory, elementary aerospace vehicle performance, stability and 
+											control, and design.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Thermodynamics for Aerospace Engineering",
+									number: '2145212',
+									description: "Basic concepts, properties of pure substances and ideal gases, energy and thermal, first law of thermodynamics 
+											for closed systems and control volumes, entropy, second law of thermodynamics, second law analysis, 
+											introductory cycle analysis; introduction to the combustion and the first law analysis of the reacting system.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Advanced Calculus",
+									number: '2301201',
+									description: "Algebra and calculus of vectors, vector differential operators (gradient, divergence and curl), cylindrical and 
+											spherical coordinates, Green Gauss and Stokes theorems, tensors.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Statistics for Physical Science",
+									number: '2603284',
+									description: "Fundamental knowledge in Probability; Permutation and combination, central tendency; measurement of 
+											variability; hypothesis testing; application of computer in linear regression calculation; validity of regression 
+											using t-test; comparison between different regression models; use of software for analysis of experimental data in 
+											engineering.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								#Adme
+								{ 	title: "Mechanical Dynamics",
+									number: '2142211',
+									description: "Motions of particles and rigid body in 2-D; kinematics; kinetics; Newton second law of motion; equation of 
+											motion; introduction to 3-D dynamics of rigid body; impulse and momentum; introduction to mechanical 
+											vibration; natural frequency; excitation and damping; equations of motion of free and forced vibration.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Thermodynamics for International Engineers",
+									number: '2142241',
+									description: "Definitions and concepts; properties of pure substances and ideal gases; work and heat; first law of 
+											thermodynamics for control mass and control volume; second law of thermodynamics and Carnot cycle; energy; 
+											entropy; basic heat transfer and energy conversion; air-standard power cycle and refrigeration cycles; introduction 
+											to mixtures of gases; introduction to the combustion and the first law analysis of the reacting system.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Introduction to Manufacturing Processes",
+									number: '2142261',
+									description: "Introduction to concepts in manufacturing; Solidification processing of materials; Sheet metal forming process; 
+											Processing of ceramics and plastics; Composite materials and fabrications; Machining; Joining Processes; Heat 
+											treatment; Relationships between structure, properties, and manufacturing techniques; Fundamental of 
+											manufacturing cost.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Differential Equations",
+									number: '2301312',
+									description: "Existence and uniqueness theorem of solution of first order equations; initial value problem; Laplace transform; 
+											Taylor series expansion of elementary functions; numerical methods; general linear equations; solution in series; 
+											linear partial differential equations; boundary value problems.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Physics and Electronics for Engineers",
+									number: '2304154',
+									description: "Electricity; DC circuit; AC circuit; basic electronics; solid state devices; electrical actuators.",
+									academic_year: 2013,
+									semester: 1
+								},
+
+								{ 	title: "Physics and Electronics Laboratory for Engineers",
+									number: '2304194',
+									description: "Resistance and electromotive force measurements; experiments on ampmeter, voltmeter, oscilloscope, AC circuit, 
+											transistor, lenses and mirrors, polarization, interference, diffraction.",
+									academic_year: 2013,
+									semester: 1
+								}
 
 							])
+
+
+	Curriculums = Curriculum.create ([ 
+										
+										{ 	id: 1 ,
+											name: "Information and Communication",
+											abbreviation: "ICE",
+											faculty_id: 1 
+										},
+
+										{ 	id: 2 ,
+											name: "Automotive Design and Manufacturing",
+											abbreviation: "ADME",
+											faculty_id: 1  
+										},
+
+										{ 	id: 3 ,
+											name: "Aerospace",
+											abbreviation: "AERO",
+											faculty_id: 1  
+										},
+
+										{ 	id: 4 ,
+											name: "Nano",
+											abbreviation: "NANO",
+											faculty_id: 1  
+										}
+
+									])
+
+	Faculties = Faculty.create 	([
+
+									{ 	id: 1,
+										name: "Faculty of Engineering",
+										abbreviation: "ISE"
+									},
+
+									{ 	id: 2,
+										name: "Faculty of Commerce and Accountancy",
+										abbreviation: "BBA"
+									},
+
+									{ 	id: 3,
+										name: "Faculty of Economics",
+										abbreviation: "EBA"
+									},
+
+									{ 	id: 4,
+										name: "Faculty of Science",
+										abbreviation: "BSAC"
+									},
+
+									{ 	id: 5,
+										name: "Faculty of Arts",
+										abbreviation: "BALAC"
+									},
+
+									{ 	id: 6,
+										name: "Faculty of Psychology",
+										abbreviation: "JIPP"
+									},
+
+									{ 	id: 7,
+										name: "Faculty of Architecture",
+										abbreviation: "INDA"
+									},
+
+									{ 	id: 8,
+										name: "Faculty of Communication Arts",
+										abbreviation: "COMARTS"
+									}				
+
+								])
