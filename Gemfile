@@ -20,7 +20,6 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'designmodo-flatuipro-rails'
-gem 'protected_attributes'
 gem 'angularjs-rails'
 
 group :doc do
