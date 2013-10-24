@@ -123,7 +123,6 @@
 									number: '2140201',
 									description: "DC circuit analysis; Kirchhoff laws; Thevenin and Norton theorem, semiconductor devices; op amps; 
 											digital circuit; DC motor.",
-									curriculum_id: 1,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -131,7 +130,6 @@
 								{ 	title: "Electrical Circuits Lab",
 									number: '2140202',
 									description: "Practices on simple circuits.",
-									curriculum_id: 1,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -142,7 +140,6 @@
 											linear differential equations; Fourier series; Fourier transfroms; Laplace transforms; orthogonal functions and 
 											application to boundary value problems; introduction to complex analysis; advanced matrix algebra; vector 
 											calculus.",
-									curriculum_id: 1,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -150,7 +147,6 @@
 								{ 	title: "Fundamental Data Structure and Algorithm",
 									number: '2143203',
 									description: "Basic data types, trees, basic operations on sets, sorting and searching, algorithm design techniques, memory management.",
-									curriculum_id: 1,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -161,7 +157,6 @@
 											cost analysis; break even point, Analysis of decisions in engineering under uncertainty; decision tree, expected 
 											monetary value and expected utility; expected value of perfect information and sampling information; basis for 
 											expected utility theory; rating and ranking of alternatives using multiple criteria; case studies.",
-									curriculum_id: 1,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -463,7 +458,6 @@
 											ambient. Refractory materials and their classification; properties of important refractory 
 											materials; composite materials: types and properties of composite materials; fiber and 
 											their interfaces; geometrical properties; elasticity; nanomaterials.",
-									curriculum_id: 4,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -471,7 +465,6 @@
 								{ 	title: "Mathematics for Nanotechnology",
 									number: '2141223',
 									description: "Mathematical knowledge and skills for nanotechnology.",
-									curriculum_id: 4,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -481,7 +474,6 @@
 									description: "Analysis of force systems and their equilibria as applied to engineering systems. Stresses 
 											and strains; mechanical properties of materials; hooke law, elastic modulus, stress in 
 											beam, shear force, bending moment diagram, torsion, buckling of columns, mohr circle.",
-									curriculum_id: 4,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -495,7 +487,6 @@
 											transfer functions; periodic waveforms; Fourier series; sinusoidal waveforms; phasor 
 											representations; impedances and admittances; sinusoidal steady-state analysis; 
 											frequency responses; three-phase circuits.",
-									curriculum_id: 4,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -505,7 +496,6 @@
 									description: "Fundamental laboratory techniques concerning the separation, purification and 
 											determination of physical constants of organic compounds; chemical reactions of organic 
 											compounds of various functional groups; synthesis of certain target molecules.",
-									curriculum_id: 4,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -516,7 +506,6 @@
 											structure and quantum chemistry; chemical bonding; the investigation for molecular 
 											structure; nuclear chemistry; the laws of chemical thermodynamics; free energy and 
 											chemical equilibrium; phases rule.",
-									curriculum_id: 4,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -718,7 +707,6 @@
 									description: "Analysis of force systems and their equilibrium as applied to engineering systems; stresses and strains; 
 											mechanical properties of materials; hooke law, elastic modulus, stress in beam, shear force, bending moment 
 											diagram, torsion, buckling of columns, mohr circle, fundamental of dynamics.",
-									curriculum_id: 3,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -727,7 +715,6 @@
 									number: '2145211',
 									description: "Basic aerodynamic phenomena and simplified theory, elementary aerospace vehicle performance, stability and 
 											control, and design.",
-									curriculum_id: 3,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -737,7 +724,6 @@
 									description: "Basic concepts, properties of pure substances and ideal gases, energy and thermal, first law of thermodynamics 
 											for closed systems and control volumes, entropy, second law of thermodynamics, second law analysis, 
 											introductory cycle analysis; introduction to the combustion and the first law analysis of the reacting system.",
-									curriculum_id: 3,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -746,7 +732,6 @@
 									number: '2301201',
 									description: "Algebra and calculus of vectors, vector differential operators (gradient, divergence and curl), cylindrical and 
 											spherical coordinates, Green Gauss and Stokes theorems, tensors.",
-									curriculum_id: 3,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -757,7 +742,6 @@
 											variability; hypothesis testing; application of computer in linear regression calculation; validity of regression 
 											using t-test; comparison between different regression models; use of software for analysis of experimental data in 
 											engineering.",
-									curriculum_id: 3,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -768,7 +752,6 @@
 									description: "Motions of particles and rigid body in 2-D; kinematics; kinetics; Newton second law of motion; equation of 
 											motion; introduction to 3-D dynamics of rigid body; impulse and momentum; introduction to mechanical 
 											vibration; natural frequency; excitation and damping; equations of motion of free and forced vibration.",
-									curriculum_id: 2,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -779,7 +762,6 @@
 											thermodynamics for control mass and control volume; second law of thermodynamics and Carnot cycle; energy; 
 											entropy; basic heat transfer and energy conversion; air-standard power cycle and refrigeration cycles; introduction 
 											to mixtures of gases; introduction to the combustion and the first law analysis of the reacting system.",
-									curriculum_id: 2,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -790,7 +772,6 @@
 											Processing of ceramics and plastics; Composite materials and fabrications; Machining; Joining Processes; Heat 
 											treatment; Relationships between structure, properties, and manufacturing techniques; Fundamental of 
 											manufacturing cost.",
-									curriculum_id: 2,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -800,7 +781,6 @@
 									description: "Existence and uniqueness theorem of solution of first order equations; initial value problem; Laplace transform; 
 											Taylor series expansion of elementary functions; numerical methods; general linear equations; solution in series; 
 											linear partial differential equations; boundary value problems.",
-									curriculum_id: 2,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -808,7 +788,6 @@
 								{ 	title: "Physics and Electronics for Engineers",
 									number: '2304154',
 									description: "Electricity; DC circuit; AC circuit; basic electronics; solid state devices; electrical actuators.",
-									curriculum_id: 2,
 									academic_year: 2013,
 									semester: 1
 								},
@@ -817,7 +796,6 @@
 									number: '2304194',
 									description: "Resistance and electromotive force measurements; experiments on ampmeter, voltmeter, oscilloscope, AC circuit, 
 											transistor, lenses and mirrors, polarization, interference, diffraction.",
-									curriculum_id: 2,
 									academic_year: 2013,
 									semester: 1
 								}
@@ -828,25 +806,25 @@
 	Curriculums = Curriculum.create ([ 
 										
 										{ 	id: 1 ,
-											name: "Information and Communication Engineering",
+											name: "Information and Communication",
 											abbreviation: "ICE",
 											faculty_id: 1 
 										},
 
 										{ 	id: 2 ,
-											name: "Automotive Design and Manufacturing Engineering",
+											name: "Automotive Design and Manufacturing",
 											abbreviation: "ADME",
 											faculty_id: 1  
 										},
 
 										{ 	id: 3 ,
-											name: "Aerospace Engineering",
+											name: "Aerospace",
 											abbreviation: "AERO",
 											faculty_id: 1  
 										},
 
 										{ 	id: 4 ,
-											name: "Nano Engineering",
+											name: "Nano",
 											abbreviation: "NANO",
 											faculty_id: 1  
 										}
