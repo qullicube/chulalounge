@@ -9,7 +9,7 @@
                 <h4>{{curriculum.abbreviation}}</h4>
                 {{curriculum.name}}
               </div>
-              <div class="fui-arrow-right"></div>  
+              <div eclass="fui-arrow-right"></div>  
           </li>
         </ul>
     </div>
@@ -26,7 +26,7 @@
     <div id="course" class="span4" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
       	<ul class="small-show test" ng-show="curriculumSelected != null && yearSelected != null">
       		<li ng-repeat="course in courses">
-      		  <a class="content" ng-href="../course/{{course.id}}">
+      		  <a class="content" ng-href="{{id}}/course/{{course.id}}">
       		    <h4>{{course.title}}</h4>
       		  	{{course.number}}  
       		  </a>
@@ -39,8 +39,10 @@
     <div id="search-tool" class="span4">
           <div class="footer search">
             <!-- AJAX CALL ONLY -->
-              <div class="span10"><input id="search-course" type="search" placeholder="Find your course" class="pull-left"></div>
-              <div class="fui-search pull-right"></div>
+            <div class="search-wrapper span11 pull-left">
+              <input id="search-course" type="search" placeholder="Find your course">
+            </div>
+            <div class="fui-search pull-right" style="display:inline-block;"></div>
           </div>
     </div>
     </div>

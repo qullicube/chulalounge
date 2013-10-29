@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024113705) do
+ActiveRecord::Schema.define(version: 20131028144044) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20131024113705) do
     t.string   "title"
     t.integer  "number"
     t.text     "description"
-    t.integer  "academic_year"
+    t.integer  "year"
     t.integer  "semester"
     t.datetime "created_at"
     t.datetime "updated_at"

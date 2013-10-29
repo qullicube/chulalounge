@@ -31,11 +31,47 @@ App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 
 				$("#search-course").blur(function(){
 					setTimeout(function(){
-						if(!$("#search-course").is(":focus")){
+						if(!$("#search-course").is(":focus") && $("#search-course").val() == ""){
 						$("#search-tool").clearQueue().switchClass("span12", "span4", focus_duration);
+						
 					}},wait_duration);
 				});
 			}
+
+			//Typeahead
+			$('#search-course').typeahead({
+				valueKey : 'title',
+				remote:{
+					url: '/query/courses.json?q=',
+					replace: function (url, query) {
+							return url + query + '&f=' + $scope.id;
+						}
+					},
+				template: [
+					'<div class="search-suggestion">',
+					'<h4>{{title}}</h4>',
+					'<p>{{number}}</p>',
+					'</div>'				
+					].join(''),
+				engine: Hogan,
+				limit: 5
+
+			});
+
+			$('#search-course').on('typeahead:selected', function(e, datum){
+				window.location.href= $scope.id+"/course/"+datum.id;
+				console.log($scope.id+"/course/"+datum.id);
+			});
+
+			$('#search-tool .tt-dropdown-menu').css({
+				'top':'',
+				'bottom':'153%',
+				'width' : '113%'
+			});
+
+			$('#search-tool .tt-dropdown-menu').watch('display', function() {
+				$('#search-tool .tt-dropdown-menu').css('left','-29px');
+			});
 
 			//Which column is currently selected?
 			$scope.selectedColumn = function(i) {
@@ -49,8 +85,6 @@ App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 			}
 
 			$scope.resize = function(height) {
-				//var height = $("#main").height() + $("#search-tool").height()-1;
-				console.log($("#main").height());
 				$('#year').height(height);
 				$('#course').height(height);
 			}
@@ -78,21 +112,23 @@ App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 
 					$scope.courses = [];
 					$scope.yearSelected = c;
-					console.log($scope.curriculumSelected.courses);
 					
-					for(var i=0;i<$scope.curriculumSelected.courses.length;i++){
-						if($scope.curriculumSelected.courses[i].academic_year == c.y &&
-							$scope.curriculumSelected.courses[i].semester == c.s){
-							$scope.courses.push($scope.curriculumSelected.courses[i]);
+					$http({method:'GET', url: '/query/curriculums.json',
+						params: {
+							id: $scope.curriculumSelected.id,
+							year: c.y,
+							semester: c.s
 						}
-					}
+					}).success(function(data) {
+						$scope.courses = data;
+					});
 				}
 			}
 
 			$scope.init = function(id) {
+				$scope.id = id;
 				$http({method:'GET', url: '/faculties/' + id}).
 						success(function(data){
-							console.log(data);
 							$scope.curriculums = data.curriculums;		
 						});
 				$scope.years = [

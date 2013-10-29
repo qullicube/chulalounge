@@ -4,5 +4,4 @@ App.controller('PageIndex', ['$scope', '$http',function($scope, $http){
 		success(function(data){
 			$scope.faculties = data;		
 		});
-
 }]);

@@ -19,6 +19,8 @@
 //= require jquery.ui.effect
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require bootstrap-typeahead-rails
+//= require hogan.js
 //= require flatuipro
 //= require turbolinks
 //= require angular

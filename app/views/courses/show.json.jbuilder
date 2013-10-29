@@ -1,4 +1,4 @@
-json.extract! @course, :title, :number, :description, :academic_year, :created_at, :updated_at
+json.extract! @course, :title, :number, :description, :year, :created_at, :updated_at
 
 json.teaches @teaches
 json.ratings @course.ratings do |j, r|
