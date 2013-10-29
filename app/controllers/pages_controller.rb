@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def course_index
-  	@id = params[:id]
+  	@id = params[:cid]
   end
   
   def course_register

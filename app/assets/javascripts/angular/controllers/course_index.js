@@ -11,13 +11,36 @@ App.controller('PageCourseIndex', ['$scope', '$http', function($scope, $http){
 		}
 	});
 
+	//Description
+	$scope.message = "Click to expand";
+	$scope.toggleDescription= false;
+	$scope.lock = false;
+	$scope.expandDescription = function() {
+	  if(!$scope.lock){
+	  	$scope.lock = true;
+		if($scope.toggleDescription){
+			$("#description").fadeOut(focus_duration, function() {
+				$scope.lock = false;
+				$scope.toggleDescription = false;
+				$scope.message = "Click to hide";
+			});
+		} else {
+			$("#description").fadeIn(focus_duration, function() {
+				$scope.lock = false;
+				$scope.toggleDescription = true;
+				$scope.message = "Click to expand";
+			});
+		}
+	  }
+	}
+
 	var average = function(array, name) {
 		if(array.length > 0) {
 			var sum = 0;
 			for(var i = 0; i < array.length; i++){
 				sum += array[i][name];
 			}
-			return sum/array.length;
+			return Math.round(sum/array.length*10)/10;
 		} else {
 			return 'NaN';
 		}
@@ -29,7 +52,7 @@ App.controller('PageCourseIndex', ['$scope', '$http', function($scope, $http){
 			year: 2013,
 			professors: []
 		}
-
+     
 		f = [];
 
 		angular.forEach(tArray, function(value, key) {

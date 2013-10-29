@@ -36,7 +36,7 @@ class CurriculumsController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /curriculums/1
   # PATCH/PUT /curriculums/1.json
   def update

@@ -29,6 +29,26 @@ class CoursesController < ApplicationController
     end
   end
 
+  def query
+
+  end
+
+  def search_query
+    @courses = Course.autocomplete(params[:f],params[:q])
+    
+    respond_to do |format|
+      format.json { render :query}
+    end
+  end
+
+  def curriculum_query
+    @courses = Curriculum.find(params[:id]).courses.where("year LIKE ? AND semester LIKE ?", "#{params[:year]}", "#{params[:semester]}")
+
+    respond_to do |format|
+      format.json { render :query}
+    end
+  end
+
   # GET /courses/new
   def new
     @course = Course.new
@@ -87,6 +107,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:title, :number, :description, :faculty, :academic_year)
+      params.require(:course).permit(:title, :number, :description, :faculty, :year)
     end
 end

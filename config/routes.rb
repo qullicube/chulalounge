@@ -12,11 +12,13 @@ ChulaLounge::Application.routes.draw do
   resources :users
 
   root to: 'pages#index'
-  get 'pages/nav/:id' => 'pages#nav'
-  get 'pages/course/:id' => 'pages#course_index'
+  get 'pages/nav/:id' => 'pages#nav', :constraints => { :id => /[0-9]+(\%7C[0-9]+)*/ }
+  get 'pages/nav/:id/course/:cid' => 'pages#course_index', :constraints => { :id => /[0-9]+(\%7C[0-9]+)*/, :cid => /[0-9]+(\%7C[0-9]+)*/ }
   get 'pages/course_register' => 'pages#course_register'
-  
-  
+  get 'query/courses' => 'courses#search_query'
+  get 'query/curriculums' => 'courses#curriculum_query'
+
+
   namespace :api, defaults: {format: :json} do 
     resources :courses
   end

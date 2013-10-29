@@ -1,6 +1,15 @@
-App.controller('PageCourseRegister', ['$scope', 'Course', 'Professor','Teach', 
+Array.prototype.removeIf = function(callback) {
+    var i = this.length;
+    while (i--) {
+        if (callback(this[i], i)) {
+            this.splice(i, 1);
+        }
+    }
+};
+
+App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach', 
 	
-	function($scope, Course, Professor, Teach) {
+	function($scope, $http, Professor, Teach) {
 
 	var today = new Date();
 	$scope.years = [];
@@ -9,27 +18,53 @@ App.controller('PageCourseRegister', ['$scope', 'Course', 'Professor','Teach',
 		$scope.years.push(today.getFullYear()-i);
 	}
 
+	$scope.ayears = [1,2,3,4];
+
 	$scope.editCourseMode = false;
 	$scope.editDescMode = false;
+	$scope.editMetaMode = false;
 
 	$scope.data = {
 		course : {
-			title: "New Title",
-			number: 1111111,
-			description : "New Description"
+			title: "Course Title",
+			number: "XXXXXXX",
+			description : "Course Description",
+			year : 1,
+			semester : 1
 		},
+		curriculums: [],
 		teaches : [] 
 	};
 
 	$scope.teach = {
 		year: 2013,
-		professors: []
+		professors: [],
+		professor: {}
 	};
 
-	$scope.course = {};
+	$scope.course = { 
+		year: 1,
+		curriculums: []
+	}; 
 	$scope.description = "";
+	$scope.professor_list = Professor.query();
+	$scope.profs = $scope.professor_list;
+ 	
+	$http({method:'GET', url: '/faculties'}).
+		success(function(data){
+			$scope.faculties = data;		
+		}
+	);
 
-	$scope.profs = Professor.query();
+	$scope.removeCurr = function(obj) {
+		var index = $scope.course.curriculums.indexOf(obj);
+		if(index != -1)
+			$scope.course.curriculums.splice(index,1);
+	}
+
+	$scope.addCurr = function() {
+		$scope.course.curriculums.push({});
+	}
 
 	$scope.removeProf = function(obj) {
 		var index = $scope.teach.professors.indexOf(obj);
@@ -42,6 +77,15 @@ App.controller('PageCourseRegister', ['$scope', 'Course', 'Professor','Teach',
 	}
 
 	$scope.addTeach = function() {
+		$scope.teach.professors.push($scope.teach.professor);
+		$scope.teach.professors.removeIf(function(value, index) {
+			if(value == undefined)
+				return true;
+			if('name' in value)
+				return false;
+			return true;
+		});
+
 		$scope.data.teaches.push($scope.teach);
 		$scope.teach = {
 			year: today.getFullYear(),
@@ -72,8 +116,49 @@ App.controller('PageCourseRegister', ['$scope', 'Course', 'Professor','Teach',
 		$scope.data.course.description = $scope.description;
 		$scope.editDescMode = false;
 	}
+
+	$scope.editMeta = function(enter) {
+		$scope.course.year = $scope.data.course.year;
+		$scope.course.semester = $scope.data.course.semester;
+		$scope.course.curriculums = $scope.data.curriculums;
+		$scope.editMetaMode = enter;
+	}
+
+	$scope.saveMeta = function() {
+		$scope.data.course.year = $scope.course.year;
+		$scope.data.course.semester = $scope.course.semester;
+		$scope.data.curriculums = $scope.course.curriculums;
+
+		if($scope.course.semester == 1){
+			$('#s1').addClass('active');
+			$('#s2').removeClass('active');
+		}
+		else {
+			$('#s2').addClass('active');
+			$('#s1').removeClass('active');
+		}
+		$scope.editMetaMode = false;
+	}
+
+	var flatten_array_curr = function(array) {
+			var res = [];
+			for(var i =0; i< array.length;i++){
+				res.push(array[i].curriculum);
+			}
+			return res
+	}
+
+	var delete_teach_professor = function (array){
+		for(var i=0; i< array.length; i++){
+			delete array[i].professor;
+		}
+		return array;
+	}
 	$scope.save = function() {
-		var newCourse = new Course($scope.data);
-		newCourse.$save();
+		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
+		delete_teach_professor($scope.data.teaches);
+
+		console.log($scope.data);
 	}
 }]);
+
