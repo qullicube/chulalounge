@@ -7,7 +7,7 @@
 
 <p>
   <strong>Timestamp:</strong>
-  <%= @comment.timestamp %>
+  <%= @comment.timestamp.datetime.to_formatted_s(:long)  %>
 </p>
 
 <p>

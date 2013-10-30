@@ -6,7 +6,7 @@ class Professor < ActiveRecord::Base
 	validates_associated :teaches
 
 	validates :name, length: {minimum: 1} ,allow_blank: false
-	validates :lastname, length: {minimum: 1} ,allow_blank: false
+	validates :last_name, length: {minimum: 1} ,allow_blank: false
 
 
 end
