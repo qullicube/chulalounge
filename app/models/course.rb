@@ -20,4 +20,12 @@ class Course < ActiveRecord::Base
       	]
       	)
     end
+
+    validates_associated :curriculums
+    validates_associated :teaches
+    
+    validates :title, length: {minimum: 1} ,allow_blank: false
+    validates :number, length: {is: 7}, numericality: {only_integer: true}, allow_blank: false
+    validates :description, length: {minimum: 1} ,allow_blank: false
+    validates :year, length: {is: 1}, numericality: {only_integer: true}, allow_blank: false
 end
