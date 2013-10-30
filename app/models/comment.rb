@@ -8,6 +8,6 @@ class Comment < ActiveRecord::Base
 	
 	validates :content, length: {minimum: 1} ,allow_blank: false
 	validates :user, length: {minimum: 1} ,allow_blank: false
-	validates :course, length: {is: 7}, numericality: {only_integer: true}, allow_blank: false
+	#validates :course, length: {is: 7}, numericality: {only_integer: true}, allow_blank: false
 		
 end
