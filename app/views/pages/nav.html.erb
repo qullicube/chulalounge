@@ -27,8 +27,7 @@
       	<ul class="small-show test" ng-show="curriculumSelected != null && yearSelected != null">
       		<li ng-repeat="course in courses">
       		  <a class="content" ng-href="{{id}}/course/{{course.id}}">
-      		    <h4>{{course.title}}</h4>
-      		  	{{course.number}}  
+      		    <h4><span class="cnum">{{course.number}} : </span> {{course.title}}</h4>
       		  </a>
       		</li>
       	</ul>
