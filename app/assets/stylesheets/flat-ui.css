@@ -5622,20 +5622,17 @@ input.search-query {
   top: 13px;
 }
 .breadcrumb {
-  background-color: #f3f4f5;
-  font-size: 14.994px;
-  font-weight: 700;
-  padding: 13px 20px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  background-color: white;
+  font-size: 17px;
+  font-weight: 600;
+  color: #D13200;
 }
 .breadcrumb > li {
   position: relative;
   text-shadow: none;
 }
 .breadcrumb > li:after {
-  color: #bdc3c7;
+  color: #A22700;
   content: "\e002";
   display: inline-block;
   font-family: 'Flat-UI-Icons';
@@ -5645,7 +5642,7 @@ input.search-query {
   -webkit-font-smoothing: antialiased;
 }
 .breadcrumb .active {
-  color: #bdc3c7;
+  color: #D13200;
   cursor: default;
 }
 .breadcrumb .active:after {
@@ -5656,8 +5653,7 @@ input.search-query {
   cursor: inherit;
 }
 .breadcrumb-text {
-  color: #bdc3c7;
-  margin-bottom: 20px;
+  color: #A22700;
 }
 .breadcrumb-text .caption {
   font-weight: 700;
@@ -5682,7 +5678,7 @@ input.search-query {
   margin-bottom: 20px;
 }
 .breadcrumb-text p a:after {
-  color: #bdc3c7;
+  color: #D13200;
   content: "/";
   font-weight: 300;
   margin: 0 4px 0 9px;
