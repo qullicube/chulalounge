@@ -37,7 +37,6 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach',
 	};
 
 	$scope.teach = {
-		year: 2013,
 		professors: [],
 		professor: {}
 	};
@@ -85,17 +84,24 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach',
 				return false;
 			return true;
 		});
+		var index = $scope.years.indexOf($scope.teach.year);
+
+		if(index > -1) $scope.years.splice(index, 1);
 
 		$scope.data.teaches.push($scope.teach);
 		$scope.teach = {
-			year: today.getFullYear(),
 			professors: []
 		};
 	}
 	$scope.removeTeach = function(obj){
 		var index = $scope.data.teaches.indexOf(obj);
 		if(index != -1)
-		$scope.data.teaches.splice(index, 1);
+		{
+			$scope.years.push(obj.year);
+			$scope.years.sort();
+			$scope.years.reverse();
+			$scope.data.teaches.splice(index, 1);
+		}
 	}
 	$scope.editCourse = function(enter){
 		$scope.course.title = $scope.data.course.title;
@@ -157,8 +163,11 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach',
 	$scope.save = function() {
 		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
 		delete_teach_professor($scope.data.teaches);
-
-		console.log($scope.data);
+		$http({method:"POST", url:'/save/courses', data: $scope.data}).success(function() {
+			$("#test").html(data);
+		}).error(function(data) {
+			$("#test").html(data);
+		});
 	}
 }]);
 

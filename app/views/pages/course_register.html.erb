@@ -11,6 +11,7 @@
 				    	<div class="year">
 					    	<span class="meta-label">Year</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					    	<select ng-model="course.year" ng-options="y for y in ayears" >
+					    		<option value="">Choose Year</option>
 					    	</select>
 					    	<div class="btn-group pull-right" data-toggle="buttons-radio" >
 					    		<button id="s1" type="button" class="btn btn-small active" ng-click="course.semester=1">S1</button>
@@ -56,7 +57,8 @@
 			  		<form ng-submit="addTeach()">
 			  			<h6>Course Teaching</h6>
 			  			<div>
-				  			<select ng-model="teach.year" ng-options="y for y in years">	
+				  			<select ng-model="teach.year" ng-options="y for y in years">
+				  				<option value="">Choose Academic Year</option>	
 				  			</select>
 			  			</div>
 			  			<div>
@@ -117,3 +119,5 @@
 		<button ng-click="save()" type="button" style="float:right; margin-top:10px" class="btn">Save Course</button>
 	</div>
 </div>
+
+<div id="test"></div>

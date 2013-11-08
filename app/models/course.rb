@@ -6,7 +6,7 @@ class Course < ActiveRecord::Base
 	has_many :professors , through: :teaches
 
 	def self.autocomplete faculty,query
-	  all(
+	  Course.all(
 	  	:conditions => [
 	  	"(LOWER(courses.title) LIKE ? OR courses.number LIKE ?) AND faculties.id LIKE ?", "#{query}%", "#{query}%", "#{faculty}"],
 	  	:joins => [{:curriculums => :faculty}]

@@ -37,7 +37,7 @@ class CoursesController < ApplicationController
     @courses = Course.autocomplete(params[:f],params[:q])
     
     respond_to do |format|
-      format.json { render :query}
+      format.json { render :query }
     end
   end
 
@@ -74,10 +74,18 @@ class CoursesController < ApplicationController
     end
   end
 
+  # POST
+  def register
+    @course = Course.new(course_params)
+
+    respond_to do |format|
+      format.json {render json: @course}
+    end
+
+  end
   # PATCH/PUT /courses/1
   # PATCH/PUT /courses/1.json
   def update
-    raise ''
     respond_to do |format|
       if @course.update(course_params)
         format.html { redirect_to @course, notice: 'Course was successfully updated.' }
