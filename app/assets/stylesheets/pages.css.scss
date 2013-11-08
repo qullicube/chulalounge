@@ -135,7 +135,8 @@ ul {
   }
   h4 {
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 400;
+    color: $red;
   }
   a:hover {
     background-color:transparent;
@@ -235,8 +236,9 @@ input[type="search"]::-webkit-input-placeholder{
   height:100%;
   li.active {
       color: $red;
+      background: $darkred;
       * {
-        color: $red;
+        color: white;
       }
   }
 }
@@ -245,13 +247,17 @@ input[type="search"]::-webkit-input-placeholder{
   overflow:auto;
   li.active {
     color:$column3;
-    background: $red;
+    background: $darkred;
+    border-left: 1px solid white;
+    * {
+        color: white;
+      }
   }
 }
 
 #course {
   li {
-    padding: 17px 16px 3px 16px;
+    padding: 17px 16px 17px 16px;
   }
 }
 
@@ -532,3 +538,7 @@ input[type="search"]::-webkit-input-placeholder{
   margin-top: 5px;
   }
 }
+  .cnum {
+    color: #798795;
+    font-size: 16px
+  }

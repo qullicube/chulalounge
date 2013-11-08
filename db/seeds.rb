@@ -815,7 +815,7 @@
 																				'2143203',
 																				'2143310'
 																				])
-										},
+									},
 
 										{ 	id: 2 ,
 											name: "Automotive Design and Manufacturing",
@@ -850,7 +850,7 @@
 																				'2141261',
 																				'2141270',
 																				'2302203',
-																				'2302231'])
+																				'2302231'])										
 										}
 
 									])
@@ -906,6 +906,10 @@
 		{
 			id: 2,
 			name: "Poon"
+		},
+		{
+			id: 4,
+			name: "Knights"
 		}
 		])
 	Comments = Comment.create([
@@ -918,6 +922,13 @@
 			content: "This course is ironically hard",
 			user_id: 2,
 			course_id: 1
+
+		},
+
+		{ 
+			content: "Test Time Stamp",
+			user_id: 4,
+			course_id: 2
 
 		}
 	])

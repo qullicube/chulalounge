@@ -24,6 +24,8 @@ gem 'jquery-ui-rails'
 gem 'designmodo-flatuipro-rails'
 gem 'angularjs-rails'
 gem 'angularjs-rails-resource'
+gem "breadcrumbs_on_rails"
+
 
 group :doc do
 	gem 'sdoc', require: false
