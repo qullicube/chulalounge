@@ -163,10 +163,10 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach',
 	$scope.save = function() {
 		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
 		delete_teach_professor($scope.data.teaches);
-		$http({method:"POST", url:'/save/courses', data: $scope.data}).success(function() {
-			$("#test").html(data);
+		$http({method:"POST", url:'/save/courses', data: $scope.data}).success(function(data) {
+			console.log(data);
 		}).error(function(data) {
-			$("#test").html(data);
+			console.log(data);
 		});
 	}
 }]);

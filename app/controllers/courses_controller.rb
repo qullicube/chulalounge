@@ -84,6 +84,7 @@ def index
     end
 
   end
+  
   # PATCH/PUT /courses/1
   # PATCH/PUT /courses/1.json
   def update
